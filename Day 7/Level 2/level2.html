@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // q1
+
+        function solveLinEq(a, b, c, x) {
+            let y = (-a * x - c) / b;
+            if (b === 0) {
+                if (a * x + c === 0) {
+                    return "Infinite solutions for y"
+                } else {
+                    return "No solutions for y"
+                }
+
+            } else {
+                return y;
+
+            }
+        }
+        console.log(solveLinEq(0, 0, 0, 1));
+
+        // q2
+        function solveQuad(a, b, c) {
+            let d = b * b - 4 * a * c;
+
+            if (d > 0) {
+                let root1 = (-b + Math.sqrt(d)) / (2 * a);
+                let root2 = (-b - Math.sqrt(d)) / (2 * a);
+                return [root1, root2];
+            } else if (d === 0) {
+                root = -b / (2 * a);
+                return [root];
+            } else {
+                return [];
+            }
+        }
+
+        console.log(solveQuad(1, -3, 2))
+        // q3
+        array = ['afq4t', 'w5waf', 'drt', 'tywey', 'ywtw', 'wy54y'];
+        function printArray() {
+            for (const value of array) {
+                console.log(value)
+            }
+        }
+        printArray(array);
+
+        // q4
+        function showDateTime() {
+            let d = new Date();
+
+            let date = d.getDate();
+            let month = d.getMonth() + 1;
+            let year = d.getFullYear();
+            let hour = d.getHours();
+            let minutes = d.getMinutes();
+
+            month = month < 10 ? `0${month}` : month;
+            hour = hour < 10 ? `0${hour}` : hour;
+            date = date < 10 ? `0${date}` : date;
+            minutes = minutes < 10 ? `0${minutes}` : minutes;
+
+
+            // date = date < 10 ? '0' + date.toString() : date;
+            // month = month < 10 ? '0' + month.toString() : month;
+            // hour = hour < 10 ? '0' + hour.toString() : hour;
+            // minutes = minutes < 10 ? '0' + minutes.toString() : minutes;
+
+            let format = `${date}/${month}/${year} ${hour}:${minutes}`
+            return format;
+
+        } console.log(showDateTime())
+
+        // q5
+        function swapValues(x, y) {
+            return [y, x]
+        }
+        console.log(swapValues(2, 3));
+
+        // q6
+        let arr_given = [1, 2, 3, 4, 5]
+        let new_reverse_arr = [];
+
+        function reverseArray(arrgiven) {
+
+            for (let i = arrgiven.length - 1; i >= 0; i--) {
+                new_reverse_arr.push(arrgiven[i]);
+            }
+            return new_reverse_arr;
+        }
+        console.log(reverseArray(arr_given))
+        // or   
+
+        // let array_given = ['A', 'B', 'C', 'D', 'E'];
+        // function reverseArray(arr) {
+        //     let reversedarray_result = [];
+        //     for (let i = arr.length - 1; i >= 0; i--) {
+        //         reversedarray_result.push(arr[i]);
+        //     }
+        //     return reversedarray_result;
+        // }
+        // console.log(reverseArray(array_given));
+
+        // q7
+        // arrayGiven = ['Kanak', 'Mehak', 'Shanvi', 'Chetna', 'Tanisha'];
+        // let cap_array = [];
+
+        // function capitalizeArray(arr) {
+        //     arrayGiven.forEach((arr,i) => {
+        //         cap_array.push(arrayGiven[i].toUpperCase());
+        //     });
+        //     return cap_array;
+
+        // }
+        // console.log(capitalizeArray(arrayGiven))
+
+        // Q8
+        //   let items = [];
+        //   function addItem(item) {
+        //     items.push(item);
+        //     return items;
+        //   }
+        //   console.log(addItem('apple'));
+        //   console.log(addItem('orange'));
+        //   console.log(addItem('banana'));
+
+        //q9
+        let remove_item = ['apple', ' orange', 'grapes'];
+        function addItem(itemm) {
+            remove_item.pop(itemm);
+            return remove_item;
+        }
+        console.log(remove_item)
+        console.log(addItem());
+        console.log(addItem());
+        console.log(addItem());
+
+        // q10
+        function sumOfNumbers(num) {
+            let sum = 0;
+            for (let i = 0; i <= num; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+        console.log(sumOfNumbers(1, 3));
+
+        // q11
+        function sumOfOdds(nums) {
+            let sum = 0;
+            for (let i = 0; i <= nums; i++) {
+                if (i % 2 !== 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+        console.log(sumOfOdds(10));
+        console.log(sumOfOdds(5));
+
+        // q12
+        function sumOfEven(nums) {
+            let sum = 0;
+            for (let i = 0; i <= nums; i++) {
+                if (i % 2 == 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+        console.log(sumOfEven(10));
+        console.log(sumOfEven(5));
+
+        // q13
+
+        // let Item = [];
+
+        // function evensAndOdds (numberss) {
+        //     for( let i = 0 ; i < numberss ; i++) {
+        //         if (numberss%2 === 0) {
+        //             Item.push(numberss);
+        //             var resulrr = Item.length
+        //         } else {
+        //             Item.push(numberss);
+        //             var resulrr = Item.length
+
+        //         }
+        //     } return evensAndOdds;
+        // }
+
+        // console.log(evensAndOdds(Item));
+
+        function evenOddNum(NUM) {
+
+            let evenCount = 0;
+            let oddCount = 0;
+            for (let i = 1; i <= NUM; i++) {
+
+                if (i % 2 === 0) {
+                    evenCount++;
+                } else {
+
+                    oddCount++;
+                }
+            }
+            return { evenCount, oddCount }
+        }
+        console.log(evenOddNum(47))
+
+        // q14
+        // function add(x, y, j, i) {
+        //     return x + y +i + j ;
+        // }
+        // console.log(add(4,7, 90,0))
+
+        function sumarg() {
+            let sum = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+        console.log(sumarg(3, 4, 6, 7, 8, 89));
+
+        // q15
+        function randomUserIp() {
+            let firstPart = Math.floor(Math.random() * 250);
+            let secondPart = Math.floor(Math.random() * 250);
+            let thirdPart = Math.floor(Math.random() * 250);
+            let fourthPart = Math.floor(Math.random() * 250);
+            console.log(`${firstPart}.${secondPart}.${thirdPart}.${fourthPart}`)
+
+            return { firstPart, secondPart, thirdPart, fourthPart }
+        }
+        (randomUserIp());
+
+        // q16
+        function randomMacAddress() {
+            let arr = [];
+            let arr2 = [];
+            let arr3 = [];
+            let arr1 = [];
+
+            let givenChar = "ABCDEF0123456789"
+            for (let i = 0; i < 2; i++) {
+                let id1 = givenChar[Math.floor(Math.random() * 15)]
+
+                let id2 = givenChar[Math.floor(Math.random() * 15)]
+                let id3 = givenChar[Math.floor(Math.random() * 15)]
+                let id4 = givenChar[Math.floor(Math.random() * 15)]
+                let id5 = givenChar[Math.floor(Math.random() * 15)]
+                let id6 = givenChar[Math.floor(Math.random() * 15)]
+                arr1.push(id1 + id2);
+                arr2.push(id3 + id4);
+                arr3.push(id5 + id6);
+                arr = arr1.concat(arr2, arr3)
+
+            }
+            return arr.join(':');
+
+        }
+        console.log(randomMacAddress())
+
+        // q17
+        let hexa = '';
+        let given = "abcdef0123456789";
+        function randomHexaNumberGenerator() {
+
+            for (let i = 0; i < 6; i++) {
+                hexa += (given[Math.floor(Math.random() * 15)])
+            }
+            // console.log(`#${hexa}`)
+
+            return (`#${hexa}`);
+
+        }
+        console.log(randomHexaNumberGenerator());
+
+        //  q18
+        let code = '';
+        let given_char = 'abcdefABCDEF0123456789';
+        function userIdGenerator() {
+            for (let i = 0; i < 7; i++) {
+                code += given_char[Math.floor(Math.random() * given.length)]
+            }
+            return (code);
+
+        }
+        console.log(userIdGenerator());
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

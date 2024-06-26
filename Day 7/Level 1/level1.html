@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // q1
+        function generateFullName(firstName = 'Kanak', lastName = 'Sehrawat') {
+            let space = ' '
+            let fullName = firstName + space + lastName
+            return fullName
+        }
+        console.log(generateFullName())
+
+        // q2
+        function FullName(firstName, lastName) {
+            let space = ' ';
+            let fullName = firstName + space + lastName;
+            return fullName
+        }
+
+        console.log(FullName('Kanak', 'Sehrawat'));
+
+        // q3
+        function addNumber(x, y) {
+            return x + y;
+        }
+        console.log(addNumber(12, 5));
+
+        // or
+        addNumbers = (a, b) => a + b;
+        console.log(addNumbers(12, 5));
+
+        // q4
+        areaRect = (u, v) => u * v;
+        console.log(areaRect(3, 7));
+
+        // or
+        function areaRectangle(p, q) {
+            return p * q;
+        }
+        console.log(areaRectangle(3, 7));
+
+        // q5
+        perRect = (e, r) => 2 * (e + r);
+        console.log(perRect(14, 7));
+        // or
+        function periRect(u, t) {
+            return 2 * (u + t);
+        }
+        console.log(periRect(14, 7));
+
+        // q6
+        volume = (l, b, h) => l * b * h;
+        console.log(volume(3, 7, 9));
+
+        // q7
+        areaCircle = (r) => 3.14 * r * r;
+        console.log(areaCircle(5));
+
+        //  q8
+        circumference = (r) => 2 * 3.14 * r;
+        console.log(circumference(23));
+
+        // q9
+        density = (m, v) => m / v;
+        console.log(density(15, 10));
+
+        // q10
+        speed = (s, t) => s / t;
+        console.log(speed(24, 6));
+
+        // q11
+        weight = (mass, gravity) => mass * gravity;
+        console.log(weight(10, 9.8));
+
+        // q12
+        toFaher = (Celsius) => (Celsius * 9 / 5) + 32;
+        console.log(toFaher(45));
+
+        // q13
+        bmii = (w, h) => w / (h * h);
+        let bmi = bmii(29, 1);
+        if (bmi > 30) {
+            console.log(`If BMI is ${bmi},then the person comes under the category of Obese`);
+        } else if (bmi > 25) {
+            console.log(`If BMI is ${bmi},then the person comes under the category of Overweight`);
+        } else if (bmi > 18.5) {
+            console.log(`If BMI is ${BMI},then the person comes under the category of Normal weight`);
+        } else {
+            (console.log(`If BMI is ${BMI},then the person comes under the category of Underweight`));
+        }
+        // or
+        function bbmi(weight, height) {
+            return weight / (height * height);
+        }
+
+        let BMI = bbmi(66, 1.7);
+        if (BMI > 30) {
+            console.log(`If BMI is ${BMI},then the person comes under the category of Obese`);
+        } else if (BMI > 25) {
+            console.log(`If BMI is ${BMI},then the person comes under the category of Overweight`);
+        } else if (BMI > 18.5) {
+            console.log(`If BMI is ${BMI},then the person comes under the category of Normal weight`);
+        } else {
+            (console.log(`If BMI is ${BMI},then the person comes under the category of Underweight`));
+        }
+
+        // q14
+        function checkSeason(month) {
+            let season;
+
+            switch (month.toLowerCase()) {
+                case "september":
+                case "october":
+                case "november":
+                    season = "Autumn";
+                    break;
+
+                case "december":
+                case "january":
+                case "february":
+                    season = "Winter";
+                    break;
+
+                case "march":
+                case "april":
+                case "may":
+                    season = "Spring";
+                    break;
+
+                case "june":
+                case "july":
+                case "august":
+                    season = "Summer";
+                    break;
+            }
+
+            return season;
+        }
+
+        console.log(checkSeason("may"));
+
+        // q15
+    function findMax(a ,b ,c) {
+        let max = a;
+        if (b > max) {
+            max = b;
+        }
+        if (c>max) {
+            max =c;
+        }
+        return max;
+    }
+
+    console.log(findMax(4,6,9))
+        
+
+
+
+    </script>
+</body>
+
+</html>

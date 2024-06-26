@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // q1
+    let given =
+      "abcdefghijklmnopqrstuvwxzyABCDEFGHIJKLMNOPQRSTUVWXZY0123456789";
+    let char = "";
+    while ((char.length = Math.floor(Math.random() * 16))) {
+      char += given[Math.floor(Math.random() * given.length)];
+    }
+    console.log(char);
+
+    // q2
+    // let possibleCode = 'acbdef123456789';
+    // let hexCode = [];
+    // for (let i = 0; i < 6; i++) {
+    //     hexCode.push(possibleCode[Math.floor(Math.random() * possibleCode.length)]);
+
+    // }
+    // let t = hexCode.join('');
+    // console.log(`'#${t}'`)
+    let possibleCode = "acbdef123456789";
+    let hexCode = "";
+
+    for (let i = 0; i < 6; i++) {
+      hexCode +=
+        possibleCode[Math.floor(Math.random() * possibleCode.length)];
+    }
+    console.log(`'#${hexCode}'`);
+
+    //  ques3
+    const rgb = [/\d/];
+    for (const char of rgb) {
+      var red = Math.floor(Math.random() * 255);
+      var green = Math.floor(Math.random() * 255);
+      var blue = Math.floor(Math.random() * 255);
+    }
+    console.log(`rgb(${red},${green},${blue})`);
+
+    // q4, q5 , q6
+    const countries = [
+      "Albania",
+      "Bolivia",
+      "Canada",
+      "Denmark",
+      "Ethiopia",
+      "Finland",
+      "Germany",
+      "Hungary",
+      "Ireland",
+      "Japan",
+      "Kenya",
+    ];
+    let newarray = [];
+    let newarray1 = [];
+    let newarray2 = [];
+    let newarray3 = [];
+
+    countries.forEach((country, i) => {
+      let capCountries = newarray1.push(country.toUpperCase());
+      let countrieslength = newarray2.push(countries[i].length);
+      let first_three = newarray3.push(country.slice(0, 3).toUpperCase());
+    });
+
+    // countries.forEach((capCountries,i) => {
+    //   let temparr = 0;
+    //   temparr = newarray.push(capCountries);
+    // });
+    // console.log(newarray);
+    console.log(newarray1);
+    console.log(newarray3);
+    console.log(newarray2);
+
+    //   q7
+    let land_country = [];
+    for (const land of countries) {
+      if (land.includes("land")) {
+        land_country.push(land);
+      } else console.log("All these countries are without land");
+    }
+    console.log(land_country);
+
+    //   q8
+    let req_ia_arr = [];
+    //   countries.forEach((country,i) => {
+    //     let ia_end_countries = req_ia_arr.push(country.endsWith('ia'));
+    //   });
+    //   console.log(req_ia_arr);
+    for (const countryy of countries) {
+      if (countryy.endsWith("ia")) {
+        req_ia_arr.push(countryy);
+      }
+    }
+    console.log(req_ia_arr);
+
+    //   q9
+    let longest_country = "";
+    for (i = 0; i < countries.length; i++) {
+      if (countries[i].length > longest_country.length) {
+        longest_country = countries[i];
+      }
+    }
+    console.log(longest_country);
+
+    // q10
+    let five_char_country = [];
+    for (const country of countries) {
+      if (country.length == 5) {
+        five_char_country.push(country);
+      }
+    }
+    console.log(five_char_country);
+
+    // q11
+    const webTechs = [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Redux",
+      "Node",
+      "MongoDB",
+    ];
+
+    let longestWord_web = "";
+    for (i = 0; i < webTechs.length; i++) {
+      if (webTechs[i].length > longestWord_web.length) {
+        longestWord_web = webTechs[i];
+      }
+    }
+    console.log(longestWord_web);
+
+    // q12
+    let length_arr = [];
+    let newarr_web = [];
+    webTechs.forEach((web, i) => {
+      let web_len = length_arr.push(webTechs[i].length);
+      let required_result = newarr_web.push(
+        `[ ${webTechs[i]}, ${length_arr[i]}]`
+      );
+    });
+    console.log(newarr_web);
+
+    // q13
+
+    const mernStack = ["MongoDB", "Express", "React", "Node"];
+    let acronym = "";
+    for (const tech of mernStack) {
+      acronym += tech[0];
+    }
+    console.log(acronym);
+
+    //  q14
+    for (i = 0; i < mernStack.length; i++) {
+      console.log(mernStack[i]);
+    }
+
+    //   q15
+    let fruits = ['banana', 'orange', 'mango', 'lemon'];
+    let fruits_reversed = [];
+    for (i = fruits.length - 1; i >= 0; i--) {
+      fruits_reversed.push(fruits[i]);
+    }
+    console.log(fruits_reversed)
+
+    // q16
+    const fullStack = [
+    ['HTML', 'CSS', 'JS', 'React'],
+    ['Node', 'Express', 'MongoDB']
+  ]
+  for (let each of fullStack) {
+    // console.log(each);
+    for (let each_web of each) {
+      console.log(each_web);
+    }
+
+  }
+  
+
+
+
+
+
+  </script>
+</body>
+
+</html>

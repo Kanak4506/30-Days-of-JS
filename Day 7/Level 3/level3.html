@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // q1
+        // let givenn = 'abcdefghijklmnopqrstuvwxyz0123456789'
+        // let id = ''
+        // let arr = [];
+        // function userId(char, ids) {
+        //     // char = parseInt(prompt('how many characters you want in your id?'))
+        //     // ids = parseInt(prompt('how many ids you want?'));
+        //     for (let i = 0; i < ids; i++) {
+        //         id = ''
+
+        //         for (let i = 0; i < char; i++) {
+        //             id += givenn[Math.floor(Math.random() * givenn.length)];
+        //         }
+        //         arr.push(id)
+
+        //     }
+        //     // console.log(arr)
+        //     //    arr.push(id)
+        //     //    console.log(arr)
+        //     return ids;
+        // }
+        // (userId())
+        // for (let i = 0; i < arr.length; i++) {
+        //     console.log(arr[i])
+        // }
+        // // q2
+        // function rgbColorGenerator() {
+        //     let id1 = Math.floor(Math.random() * 256);
+        //     let id2 = Math.floor(Math.random() * 256);
+        //     let id3 = Math.floor(Math.random() * 256);
+
+        //     return (`rgb(${id1},${id2},${id3})`);
+        // }
+        // console.log(rgbColorGenerator());
+
+        // extrz-------------------------------------------------------------------------------------------------------------------------------
+        //         let given = 'abcdefghijklmnopqrstuvwxyz0123456789'
+        // let id =''
+        // let arr =[];
+        //         function userId(char, ids) { 
+        //              char = parseInt(prompt('how many characters you want in your id?'))
+        //         ids = parseInt(prompt('how many ids you want?'));
+        //             for (let i=0; i <ids ; i++) {
+        //                 id =''
+
+        //             for (let i = 0; i < char; i++) {
+        //               id += given[Math.floor(Math.random()*given.length)]  ;     
+        //             }
+        //             arr.push(id)
+
+        //         } 
+        //         // console.log(arr)
+        //     //    arr.push(id)
+        //     //    console.log(arr)
+        //         return ids;
+        //         }
+        //         (userId())
+        //         for (let i=0; i< arr.length;i++) {
+        //             console.log(arr[i])
+        //         }
+        // q3-------------------------------------------------------------------------------------------------------------
+        // let given = "abcdef0123456789";
+        // let hexa = '';
+        // let arr = [];
+
+        // function randomhex() {
+        //     let noOfTimes = Math.floor(Math.random() * 5)
+        //     for(let i=0; i<noOfTimes; i++){
+        //         hexa ='';
+        //         for(let i=0; i<6; i++){
+        //             hexa += (given[Math.floor(Math.random() * 15)]);
+                    
+        //         }
+        //         return (`#${hexa}`)
+        //         arr.push(`#${hexa}`);
+        //     }
+            
+        //     return arr;
+
+        // }
+        // console.log(randomhex(arr))
+
+
+        // q3
+        // let hexa = [];
+        // let res = [];
+        // let hash = ['#'];
+
+        // let given = "abcdef0123456789";
+
+        // function randomHexaNumberGenerator() {
+        //     let noOfTimes = Math.floor(Math.random() * 5)
+
+        //     for (let i = 0; i < noOfTimes; i++) {
+
+        //         for (let j = 0; j < 6; j++) {
+
+
+        //             hexa += (given[Math.floor(Math.random() * 15)]);
+
+
+        //     }     res.push('#' + hexa);
+
+
+        //         }
+        //     return res;
+        // }
+        // console.log(randomHexaNumberGenerator());
+
+
+        // // q4
+        function arrayOfRgbColors() {
+            let color = [];
+            let red = Math.floor(Math.random() * 251);
+            let green = Math.floor(Math.random() * 251);
+            let blue = Math.floor(Math.random() * 251);
+            let any = Math.floor(Math.random() * 15)
+            for (let i = 0; i < any; i++) {
+                color.push(`rgb(${red},${green},${blue})`);
+
+            }
+            return color;
+        }
+        console.log(arrayOfRgbColors());
+
+        // // q5
+        // function convertHexToRgb(hex) {
+        //     if (hex.length === 4) {
+        //         hex = hex[1] + hex[1] + hex[2] + hex[2] + hex[3] + hex[3];
+        //     }
+        //     const r = parseInt(hex.substring(1, 2), 16);
+        //     const g = parseInt(hex.substring(3, 5), 16);
+        //     const b = parseInt(hex.substring(5, 7), 16);
+
+        //     return `rgb(${r},${g},${b})`;
+        // }
+        // console.log(convertHexToRgb("#ff2dff"));
+
+
+        // // q6
+        // function componentToHex(x) {
+        //     const hex = x.toString(16);
+        //     return hex.length === 1 ? "0" + hex : hex;
+        // }
+        // const rgbtohex = (r, g, b) => {
+        //     return '#' + componentToHex(r) + componentToHex(g) + componentToHex(b);
+        // }
+        // console.log(rgbtohex(15, 45, 255));
+
+        // // q7
+
+        // // q8
+        // // function shuffleArray(array) {
+
+        // // }
+        // // let num = ['mani', 'vids']
+        // // function shuffleArray(array) {
+        // //     const shuffledArray = array.slice();
+        // //     for (let i = 0; i < shuffledArray.length; i++) {
+        // //         const j = Math.floor(Math.random() * shuffledArray.length);
+        // //         [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+        // //     }
+        // //     return shuffledArray;
+        // // }
+        // // console.log(shuffleArray(num))
+
+
+
+
+        
+        let array = ['sg', 'dg', 'dhh', 'dgdtrsx', 'qawh']
+        function shuffleArray(array) {
+            let arr = [];
+            const newshuffledArray = array.slice();
+            for (let i = 0; i < newshuffledArray.length; i++) {
+                arr = newshuffledArray[Math.floor(Math.random() * newshuffledArray.length)]
+            }
+            return arr;
+        }
+        console.log(shuffleArray(array));
+
+
+        // // q9
+        // function factorial(num) {
+        //     if (num === 0 || num === 1) {
+        //         return 1;
+        //     }
+        //     let result = 1;
+        //     for (let i = 2; i <= num; i++) {
+        //         result *= i;
+        //     } return result;
+        // }
+        // console.log(factorial(8));
+
+        // // q10
+        // function isEmpty(array) {
+        //     let result = array.length === 0 ? "It is empty" : "It is not empty";
+        //     return result;
+        // }
+        // let ar = [1, 2, 3, 4];
+        // console.log(isEmpty(ar))
+
+        // //    q11
+        // function sum() {
+        //     let summ = 0;
+        //     for (let i = 0; i < arguments.length; i++) {
+        //         summ += arguments[i];
+        //     }
+        //     return summ;
+        // }
+        // console.log(sum(3, 4, 6, 7, 8));
+
+        // // q12
+        // function sumOfAttayItems(array) {
+        //     let sum = 0;
+        //     for (let i = 0; i < array.length; i++) {
+        //         sum += array[i];
+        //     }
+        //     return sum;
+        // }
+        // let arrSum = [3, 4, 6, 45, 8, 90]
+        // console.log(sumOfAttayItems(arrSum));
+
+        // // q13
+        // function average(array) {
+        //     let sum =0;
+        //     let avg =0;
+
+        //     for(let i=0; i<array.length; i++) {
+        //         sum += (array[i]);
+        //         avg =  (sum/array.length);
+        //     }
+        //     return avg;
+
+        // }
+        // let avgarr = [3,4,5,6,7,4,32,3,23]
+        // console.log(average(avgarr))
+
+        // q14
+        //     let arrrr = ['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']
+
+        // function modifyArray(array) {
+        //         let requirement = [];
+        //         if(modifyArray.length < 6){
+        //             var result = 'item not found'
+        //         } 
+        //          array[4] = arrrr[4].toUpperCase();
+        //          return array;
+        // }
+        // console.log(modifyArray(arrrr))
+
+
+        // q15 done
+
+        // q16
+        function unique(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < i; j++) {
+                    if (arr[i] === arr[j]) {
+                        return 'all items are not unique.'
+                    }
+                }
+            } return 'all items are unique.'
+        }
+        let check_arr = [1, 2, 4, 6, 80, 5, 55, 9, 87];
+
+        console.log(unique(check_arr));
+
+        // q17
+        // Write a function which checks if all the items of the array are the same data type
+
+        function checkDataType(cc) {
+            for (let i = 0; i < cc.length; i++) {
+                let type = typeof cc[0];
+                if (typeof cc[i] != type) {
+                    return 'found an item of different data type.'
+                }
+
+            } return 'all items are of same data type'
+        }
+        let aa = [1, 2, 3, 4, 5, 6]
+        let mixed_type = [1, 2, 'a', 'fda', 345]
+
+        console.log(checkDataType(aa))
+        console.log(checkDataType(mixed_type));
+
+        // q18
+        specialchar = ['~', '!', '@', '#', '%', '^', '&', '*', '(', ')']
+        function isValidVariable(provided) {
+            for (let i = 0; i < provided.length; i++) {
+                if (provided.includes(specialchar)) {
+                    return 'It is invalid.'
+                }
+
+            } return 'It is valid.'
+        }
+        let provided = '%^@'
+        console.log(isValidVariable(provided))
+
+
+
+    </script>
+
+</body>
+
+</html>
