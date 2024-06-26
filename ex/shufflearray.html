@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let original_array = [10, 20, 30, 40, 50]
+        let random_array = []
+
+        let temp = 0
+
+        original_array.forEach((arr_item, arr_index) => {
+            let r = original_array.length - random_array.length
+
+            do {
+                let random_num = original_array[Math.floor(Math.random() * original_array.length)]
+                // let random_num = Math.floor(Math.random() * original_array.length)
+
+
+                if (!random_array.includes(random_num)) {
+                    random_array.push(random_num)
+                }
+                // console.log(temp)
+            } while (random_array.length < 5)
+
+        });
+
+        // console.log(random_array)
+
+        // q17
+        let hexa = '';
+        let given = "abcdef0123456789";
+        function randomHexaNumberGenerator(xyz) {
+            let hex_array = []
+            for (let index = 0; index < xyz; index++) {
+                hexa = ''
+                for (let i = 0; i < 6; i++) {
+                    hexa += (given[Math.floor(Math.random() * 15)])
+                }
+                hex_array.push(`#${hexa}`)
+            }
+            console.log(hex_array)
+
+            // console.log(`#${hexa}`)
+
+            // return (`#${hexa}`);
+
+        }
+        let any = parseInt(prompt('how many numbers'))
+        randomHexaNumberGenerator(any)
+
+
+    </script>
+</body>
+
+</html>

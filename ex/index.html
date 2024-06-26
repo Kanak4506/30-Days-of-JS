@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+       
+let given = 'abcdefghijklmnopqrstuvwxyz0123456789'
+let id =''
+let arr =[];
+        function userId(char, ids) { 
+             char = parseInt(prompt('how many characters you want in your id?'))
+        ids = parseInt(prompt('how many ids you want?'));
+            for (let i=0; i <ids ; i++) {
+                id =''
+
+            for (let i = 0; i < char; i++) {
+              id += given[Math.floor(Math.random()*given.length)]  ;     
+            }
+            arr.push(id)
+           
+        } 
+        // console.log(arr)
+    //    arr.push(id)
+    //    console.log(arr)
+        return ids;
+        }
+        (userId())
+        for (let i=0; i< arr.length;i++) {
+            console.log(arr[i])
+        }
+        
+
+
+    </script>
+
+</body>
+
+</html>
