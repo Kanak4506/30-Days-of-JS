@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const users = {
+            Alex: {
+                email: 'alex@alex.com',
+                skills: ['HTML', 'CSS', 'JavaScript'],
+                age: 20,
+                isLoggedIn: false,
+                points: 30
+            },
+            Asab: {
+                email: 'asab@asab.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'Redux', 'MongoDB', 'Express', 'React', 'Node'],
+                age: 25,
+                isLoggedIn: false,
+                points: 50
+            },
+            Brook: {
+                email: 'daniel@daniel.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+                age: 30,
+                isLoggedIn: true,
+                points: 50
+            },
+            Daniel: {
+                email: 'daniel@alex.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
+                age: 20,
+                isLoggedIn: false,
+                points: 40
+            },
+            John: {
+                email: 'john@john.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
+                age: 20,
+                isLoggedIn: true,
+                points: 50
+            },
+            Thomas: {
+                email: 'thomas@thomas.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+                age: 20,
+                isLoggedIn: false,
+                points: 40
+            },
+            Paul: {
+                email: 'paul@paul.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'MongoDB', 'Express', 'React', 'Node'],
+                age: 20,
+                isLoggedIn: false,
+                points: 40
+            }
+        }
+
+        // <------q1---------> 
+        // let max = 0;
+        // let skilledPerson;
+        // for (const user of Object.keys(users)) {
+        //     if (users[user].skills.length > max) {
+        //         max = users[user].skills.length;
+        //         skilledPerson = user;
+        //     }
+        // }
+        // console.log(skilledPerson + ' has', max + ' skills')
+        // // <------q2---------> 
+        // let loggedInUser = 0;
+        // let pointmore50 = 0;
+        // for (const user of Object.keys(users)) {
+        //     if (users[user].isLoggedIn) {
+        //         loggedInUser++;
+        //     }
+        //     if (users[user].points >= 50) {
+        //         pointmore50++
+        //     }
+        // }
+        // console.log(loggedInUser);
+        // console.log(pointmore50);
+
+        // // <------q3---------> 
+        // let fullStackDeveloper = [];
+        let mern = ['MangoDB', 'Express', 'React', 'Node'];
+        const mernDevelopers = [];
+                  for (const name in users) {
+                        const user = users[name];
+                    if (user.skills.includes('MongoDB', 'Express', 'React', 'Node')) {
+                    mernDevelopers.push(name);
+          }
+}
+console.log(mernDevelopers);
+console.log(`MERN stack developers: ${mernDevelopers}`);
+
+        // <------q4---------> 
+            // let meUser = Object.assign({},users);
+        (users['Kanak']) = {
+        email: 'kanaksehrawat456@gmail.com',
+        skills: ['HTML','CSS', 'Javascript'],
+        age: 18,
+        isLoggedIn: false,
+        points: 40
+        };
+ console.log(users)
+          
+        // <------q5---------> 
+        console.log(Object.keys(users));
+
+        // <------q6---------> 
+        console.log(Object.values(users));
+
+        // <------q7---------> 
+        const countries = {
+            countryName: "India",
+            capital: "Delhi",
+            population: '2 Billion',
+            languages: ["English", "Hindi", "Marathi"]
+        }
+
+        console.log(countries)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let  ismern = true;
+        // for (let i = 0 ; i< fullStackDeveloper.length ; i++) {
+
+        //     if(ismern) {
+        //         mernDevelopers.push(users)
+        //     }
+
+        // }
+        // console.log(mernDevelopers)
+        // console.log(users)
+        // let nameUser=users.Alex
+        // console.log(nameUser.skills)
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

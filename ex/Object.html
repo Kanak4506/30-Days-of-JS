@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const users = [
+            {
+                _id: 'ab12ex',
+                username: 'Alex',
+                email: 'alex@alex.com',
+                password: '123123',
+                createdAt: '08/01/2020 9:00 AM',
+                isLoggedIn: false
+            },
+            {
+                _id: 'fg12cy',
+                username: 'Asab',
+                email: 'asab@asab.com',
+                password: '123456',
+                createdAt: '08/01/2020 9:30 AM',
+                isLoggedIn: true
+            },
+            {
+                _id: 'zwf8md',
+                username: 'Brook',
+                email: 'brook@brook.com',
+                password: '123111',
+                createdAt: '08/01/2020 9:45 AM',
+                isLoggedIn: true
+            },
+            {
+                _id: 'eefamr',
+                username: 'Martha',
+                email: 'martha@martha.com',
+                password: '123222',
+                createdAt: '08/01/2020 9:50 AM',
+                isLoggedIn: false
+            },
+            {
+                _id: 'ghderc',
+                username: 'Thomas',
+                email: 'thomas@thomas.com',
+                password: '123333',
+                createdAt: '08/01/2020 10:00 AM',
+                isLoggedIn: false
+            }
+        ];
+
+        function signUp(){
+            for( i = 0; i < users.length ; i++ ) {
+                // console.log(typeof users[i].isLoggedIn)
+                if ( users[i].isLoggedIn) {
+                    console.log(`Hello ${users[i].username} ,\nYour account already exists.`) ;
+                } else {
+                    console.log(`Hello ${users[i].username} ,\nYour account did not exists. So, please sign in to continue`) ;
+                }
+            }
+            // } return isLoggedIn;
+        }
+(signUp());
+
+// q2 part b smjna hai(doubt)
+
+const products = [
+  {
+    _id: 'eedfcf',
+    name: 'mobile phone',
+    description: 'Huawei Honor',
+    price: 200,
+    ratings: [
+      { userId: 'fg12cy', rate: 5 },
+      { userId: 'zwf8md', rate: 4.5 }
+    ],
+    likes: []
+  },
+  {
+    _id: 'aegfal',
+    name: 'Laptop',
+    description: 'MacPro: System Darwin',
+    price: 2500,
+    ratings: [],
+    likes: ['fg12cy']
+  },
+  {
+    _id: 'hedfcg',
+    name: 'TV',
+    description: 'Smart TV:Procaster',
+    price: 400,
+    ratings: [{ userId: 'fg12cy', rate: 5 }],
+    likes: ['fg12cy']
+  }
+]
+     
+function rateProduct() {
+    let rateOfPrdB = products[1].price;
+    return rateOfPrdB;
+}
+     console.log(rateProduct());
+
+
+//  function avgRating(ProductID) {
+//     let total = 0 ; 
+//     let prd ;
+ 
+//     for ( let prd of products) {
+//         if(prd._id == ProductID) {
+//            var pdt = prd;
+//         }
+   
+//         for (const user of users) {
+//             total += user.rate;
+//         }
+// return total/products.length;
+// }
+    
+    
+// }
+// function signIn() {
+// for (i = 0; i < 2; i++) {
+// let arr = (products[0].ratings[i].rate);
+// } 
+// return arr;
+// }
+// console.log(signIn())
+
+// let arr = [];
+// function likeProduct(_id, likes){
+//     for( i =0; i < products.length; i++) {
+//         if(products[i].likes.length === 6) {
+//            arr.push(products[i]._id);
+
+//         } else {
+//             console.log("Like Removed")
+//         }
+         
+//     }// return;
+// }
+// console.log(likeProduct('eedfcf','[]'))
+// console.log(typeof products[2].likes.length);
+// console.log(typeof products[0].likes.length)
+
+
+
+// function likeProduct(userId) {
+//     if( products.likes.includes('fg12cy')
+// console.log(`User ${userId}`))
+// }
+
+let likeProduct = (userId, productNo) => {
+   let pdt = products[productNo-1];
+   let index = pdt.likes.indexOf(userId);
+  
+   if(index == -1) {
+      pdt.likes.push(userId);
+   }  
+   else {
+      pdt.likes.splice(index, 1);   
+   }
+}
+
+console.log(likeProduct('venom23', 1));
+
+     </script>
+</body>
+
+</html>
