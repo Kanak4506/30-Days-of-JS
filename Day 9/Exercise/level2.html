@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>Level 2 of Day 9</title>
+</head>
+<body>
+<script type="module">
+
+import {countries} from './countries.js';
+const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const products = [
+  { product: 'banana', price: 3 },
+  { product: 'mango', price: 6 },
+  { product: 'potato', price: ' ' },
+  { product: 'avocado', price: 8 },
+  { product: 'coffee', price: 10 },
+  { product: 'tea', price: '' },
+]
+
+//************Q1*************
+
+const totalPrice = products.filter((each) => typeof each.price === 'number').reduce((acc, cur) => acc + cur.price, 0);
+console.log(totalPrice);
+
+//************Q2*************
+console.log(typeof products['price']);
+
+let sum = 0;
+function callback(acc, cur) {
+return acc + cur.price;
+};
+const price_sum = products.filter((each) => typeof each.price === 'number').reduce(callback,0);
+console.log(price_sum);
+
+
+//************Q3*************
+// const count_arr1 = countries.filter((each) => each.endsWith("land"));
+// console.log(count_arr1);
+// const count_arr2 = countries.filter((each) => each.endsWith("ia"));
+// console.log(count_arr2);
+// const count_arr3 = countries.filter((each) => each.endsWith("island"));
+// console.log(count_arr3);
+// const count_arr4 = countries.filter((each) => each.endsWith("stan"));
+// console.log(count_arr4);
+
+// console.log(count_arr1.concat(count_arr2, count_arr3, count_arr4)); 
+
+
+function categorizeCountries(countries, pattern){
+	return countries.filter((country) => country.includes(pattern));
+}
+
+let arr1 = (categorizeCountries(countries, 'land'));
+let arr2 = (categorizeCountries(countries, 'ia'));
+let arr3 = (categorizeCountries(countries, 'island'));
+let arr4 = (categorizeCountries(countries, 'stan'));
+console.log(arr1.concat(arr2, arr3, arr4)); 
+
+
+//************Q4*************
+function objectArr(letter) { 
+      let sameLetterCountry = (countries.filter((country) => country.startsWith(letter)));
+      let timesUseToStart = sameLetterCountry.length;
+      return {sameLetterCountry, timesUseToStart};
+};
+
+console.log(objectArr('A'));
+
+//************Q5*************
+function getFirstTenCountries() {
+  let firstCountry = countries.filter((each, index) => index < 10);
+  return firstCountry;
+
+}
+console.log( getFirstTenCountries());
+//************Q6*************
+function getLastTenCountries() {
+  let last_country = countries.filter((each, index) => index >= countries.length - 10);
+  return  last_country;
+
+}
+console.log( getLastTenCountries());
+
+//************Q7*************
+
+
+</script>
+</body>
+</html> 

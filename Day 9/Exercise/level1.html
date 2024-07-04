@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>Level 1 of Day 9 </title>
+</head>
+<body>
+<h1>Level 1 of Day 9</h1>
+<script>
+
+const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand']
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+const products = [
+  { product: 'banana', price: 3 },
+  { product: 'mango', price: 6 },
+  { product: 'potato', price: ' ' },
+  { product: 'avocado', price: 8 },
+  { product: 'coffee', price: 10 },
+  { product: 'tea', price: '' },
+]
+
+
+//**********Q1*****************
+let sum = 0;
+numbers.forEach((number)=> sum += number);
+console.log(sum); 
+
+sum = numbers.reduce((acc, current ) => acc + current, 0)
+console.log(sum);
+
+sum = 0;
+numbers.map((number) => sum += number)
+console.log(sum);
+
+const filtermore_than5 = numbers.filter((number) => number > 5);
+console.log(filtermore_than5);
+
+
+//**************Q2**************
+sum = 0;
+function callback(number) {
+return sum += number;
+
+}
+
+
+numbers.forEach((number) => callback(number));
+console.log(sum);
+
+sum = 0;
+numbers.map((number) => callback(number));
+console.log(sum);
+
+function greater(number) {
+return number > 5
+}
+const filter_more5 = numbers.filter((number) => greater(number));
+console.log(filter_more5);
+
+
+//************Q3**************
+countries.forEach((country) => console.log(country));
+
+//**********Q4*****************
+names.forEach((name) => console.log(name));
+
+//***************Q5***********
+numbers.forEach((number) => console.log(number));
+
+//************Q6***************
+const countryCap = countries.map((country) => country.toUpperCase());
+console.log(countryCap);
+
+//*******Q7****************
+const countries_length = countries.map((country) => country.length);
+console.log(countries_length);
+
+//**************Q8*********************
+const square = numbers.map((number) => number * number);
+console.log(square);
+
+//***************Q9*************
+const nameCap = names.map((name) => name.toUpperCase());
+console.log(nameCap);
+
+//**************Q10*************
+//const map_prices = products.map((prd) => prd.price);
+//console.log(map_prices);
+
+//**************Q11*************
+const country_land = countries.filter((country) => country.includes('land'));
+console.log(country_land);
+
+//**************Q12*************
+const country_length6 = countries.filter((country) => country.length === 6);
+console.log(country_length6);
+
+//**************Q13*************
+const country_length6more = countries.filter((country) => country.length >= 6);
+console.log(country_length6more);
+
+//**************Q14*************
+const country_E = countries.filter((country) => country.includes('land'));
+console.log(country_E);
+
+//**************Q15*************
+const map_prices = products.map((prd) => prd.price);
+console.log(map_prices);
+
+//**************Q16*************
+function getStringLists(array) {
+let some = array.filter((element) => typeof element === 'string')
+return some;
+}
+let array1 = [1,3,'kanak', 'manvi','arjun']
+console.log(getStringLists(array1));
+//**************Q17*************
+sum = 0;
+sum = numbers.reduce((acc, current ) => acc + current, 0)
+console.log(sum);
+
+//**************Q18*************
+const red_concatenate = countries.reduce((acc ,curr ) => countries + ' are north European countries.', 0)
+console.log(red_concatenate);
+
+//**************Q19*************
+//in some it returns true value even when at least one element passes the test
+const someUse = array1.some((each) => typeof each === 'string');
+console.log(someUse);
+//in every it returns true value only when all elements passes the test.  
+  const everyUse = array1.every((each) => typeof each === 'string');
+console.log(everyUse);
+
+//**************Q20*************
+const names_length = names.some((each) => each.length < 7);
+console.log(names_length);
+
+//**************Q21*************
+const every_test = countries.every((each)=> each.includes('land'));
+console.log(every_test);
+
+//**************Q22*************
+const findNum = numbers.find((each) => each > 9);
+console.log(findNum);
+
+const findNumINdex = numbers.findIndex((each) => each > 9);
+console.log(findNumINdex);
+
+//**************Q23*************
+const findcountry = countries.find((each) => each.length == 6);
+console.log(findcountry);
+
+//**************Q24*************
+const findcountryI = countries.findIndex((each) => each.length == 6);
+console.log(findcountryI);
+
+//**************Q25*************
+const findcountry_any = countries.findIndex((each) => each.includes('Norway'));
+console.log(findcountry_any);
+
+//**************Q26*************
+const findcountry_an = countries.findIndex((each) => each.includes('Russia'));
+console.log(findcountry_an);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

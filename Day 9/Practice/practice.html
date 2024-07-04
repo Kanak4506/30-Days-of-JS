@@ -1,0 +1,133 @@
+<html>
+  <head>
+	<title>
+		Day 9 Level 1
+	</title>
+  </head>
+  
+
+	<body>
+	
+		<script>
+		     
+	
+	// Higher order function returning an other function
+const higherOrder = n => {
+  const doSomething = m => {
+    const doWhatEver = t => {
+      return 0 * n + 0 * m + t;
+    }
+    return doWhatEver;
+  }
+  return doSomething;
+}
+console.log(higherOrder(2)(3)(10));
+	
+	function sayHello() {
+//console.log('Kanak is best')
+}
+//setInterval(sayHello, 1000) // it prints hello in every second, 1000ms is 1s
+	
+	setTimeout(() => {
+  console.log('This message is displayed after 2 seconds.');
+}, 2000);
+
+let sum = 0;
+const numbers = [1, 2, 3, 4, 5];
+numbers.forEach(num => sum += num)
+
+console.log(sum);
+
+
+
+const countries = ["Finland", "Denmark", "India", "Norway", "Iceland"];
+countries.forEach((element) => console.log(element.toUpperCase())); 
+	console.log(countries);
+	
+	const country = [
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Denmark',
+  'Ethiopia',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Kenya'];
+  const newCapCountries = country.map((con) => con.toUpperCase());
+  console.log(newCapCountries);
+  
+  
+  
+  const countriesEndsWith_ia = country.filter((coun) => coun.endsWith("ia"))
+  console.log(countriesEndsWith_ia);
+  
+  const num = [1, 3, -4, 6, 98,-88,-91];
+  const negativenum = num.filter((number) => number < 0)
+  console.log(negativenum)
+  
+  const countrieshave5letters = country.filter((cont) => cont.length == 5);
+  console.log(countrieshave5letters);
+  
+  const scores = [
+  { name: 'Asabeneh', score: 95 },
+   { name: 'Lidiya', score: 98 },
+  { name: 'Mathias', score: 80 },
+  { name: 'Elias', score: 50 },
+  { name: 'Martha', score: 85 },
+  { name: 'John', score: 100 },
+]
+
+const scorepersonreq = scores.filter((cricketer) => cricketer.score > 80);
+console.log(scorepersonreq);
+
+
+const name = [1,23,54 ,78, 36,4,598,8,75,990];
+const areNum = name.every((num) => typeof num === 'number');
+console.log(areNum);
+
+const reqnum = name.find((num) => num >55)
+console.log(reqnum);
+
+const reqnnum = name.findIndex((num) => num >55)
+console.log(reqnnum);
+
+const array  = [21,3,4,"kanak", "manu"];
+const someUse = array.some((each) => typeof each === "string");
+console.log(someUse);
+
+const someUdse = array.some((each) => typeof each === "number");
+console.log(someUdse);
+
+const someUsee = array.every((each) => typeof each === "string");
+console.log(someUsee);
+
+const any_array =[
+{name: "kanak", age: 18, study: "psnd hai"},
+{name: "chetna", age: 19, study: "nhi psnd"},
+{name: "mehak", age: 23, study: "psnd bilkul nhi hai"},
+{name: "tanisha", age: 13, study: "psnd hai"}
+];
+
+
+console.log(any_array);
+const asc = any_array.sort((a,b) => {
+if (a.name < b.name ) return -1;
+if (a.name > b.name ) return 1;
+return 0;
+})
+console.log(asc);
+
+const ascending = any_array.sort((a,b)=> (a.age - b.age));
+
+console.log(ascending);
+
+//const descending = any_array.sort((a,b)=> (b.age - a.age));
+
+//console.log(descending);
+
+		</script>	
+	<body>
+</html>

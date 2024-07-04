@@ -253,17 +253,22 @@
         console.log(checkDataType(aa))
         console.log(checkDataType(mixed_type));
 
+
+        
         // q18
-        //       function isValidVariable(given) {
-        //         if(given.includes(/\^$_A-Za-z/gi)){
-        //             console.log('it is valid');
-        //         } else {
-        //             console.log('it is not valid');
-        //         }
-        //       } 
-        //       let given ='fdhj$asdfk'
-        //       isValidVariable(given);
+              function isValidVariable(given) {
+              
+                if(given.match(/[$_\w]/g)){
+                  result  = ('it is valid');
+                } else {
+                    result = ('it is not valid');
+                }  return result;
+              } 
+              let given ='_fdhj$asdfk';
+              console.log(isValidVariable(given));
         // // 
+
+        // function isValidVariable(given) {}
 
         //q19
         let newArr = [];

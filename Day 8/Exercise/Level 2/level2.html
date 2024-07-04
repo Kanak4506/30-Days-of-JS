@@ -62,53 +62,50 @@
         }
 
         // <------q1---------> 
-        // let max = 0;
-        // let skilledPerson;
-        // for (const user of Object.keys(users)) {
-        //     if (users[user].skills.length > max) {
-        //         max = users[user].skills.length;
-        //         skilledPerson = user;
-        //     }
-        // }
-        // console.log(skilledPerson + ' has', max + ' skills')
+        let max = 0;
+        let skilledPerson;
+        for (const user of Object.keys(users)) {
+            if (users[user].skills.length > max) {
+                max = users[user].skills.length;
+                skilledPerson = user;
+            }
+        }
+        console.log(skilledPerson + ' has', max + ' skills')
         // // <------q2---------> 
-        // let loggedInUser = 0;
-        // let pointmore50 = 0;
-        // for (const user of Object.keys(users)) {
-        //     if (users[user].isLoggedIn) {
-        //         loggedInUser++;
-        //     }
-        //     if (users[user].points >= 50) {
-        //         pointmore50++
-        //     }
-        // }
-        // console.log(loggedInUser);
-        // console.log(pointmore50);
+        let loggedInUser = 0;
+        let pointmore50 = 0;
+        for (const user of Object.keys(users)) {
+            if (users[user].isLoggedIn) {
+                loggedInUser++;
+            }
+            if (users[user].points >= 50) {
+                pointmore50++
+            }
+        }
+        console.log(`Number of logged in users are ${loggedInUser}`);
+        console.log(`Number of users having more than 50 points are ${pointmore50}`);
 
         // // <------q3---------> 
         // let fullStackDeveloper = [];
-        let mern = ['MangoDB', 'Express', 'React', 'Node'];
         const mernDevelopers = [];
-                  for (const name in users) {
-                        const user = users[name];
-                    if (user.skills.includes('MongoDB', 'Express', 'React', 'Node')) {
-                    mernDevelopers.push(name);
-          }
-}
-console.log(mernDevelopers);
-console.log(`MERN stack developers: ${mernDevelopers}`);
+        for (const name in users) {
+            const user = users[name];
+            if (user.skills.includes('MongoDB', 'Express', 'React', 'Node')) {
+                mernDevelopers.push(name);
+            }
+        }
+        console.log(`MERN stack developers: ${mernDevelopers}`);
 
         // <------q4---------> 
-            // let meUser = Object.assign({},users);
         (users['Kanak']) = {
-        email: 'kanaksehrawat456@gmail.com',
-        skills: ['HTML','CSS', 'Javascript'],
-        age: 18,
-        isLoggedIn: false,
-        points: 40
+            email: 'kanaksehrawat456@gmail.com',
+            skills: ['HTML', 'CSS', 'Javascript'],
+            age: 18,
+            isLoggedIn: false,
+            points: 40
         };
- console.log(users)
-          
+        console.log(users)
+
         // <------q5---------> 
         console.log(Object.keys(users));
 
@@ -138,7 +135,7 @@ console.log(`MERN stack developers: ${mernDevelopers}`);
 
 
 
-       
+
 
 
 
