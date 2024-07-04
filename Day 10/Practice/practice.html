@@ -1,0 +1,95 @@
+<html>
+	<head>
+		<title>Day 10 Practice</title>
+	</head>
+	<body>
+		<script>
+
+			const set = new Set();
+			console.log(set);
+
+
+			const languages = [
+  'English',
+  'Finnish',
+  'English',
+  'French',
+  'Spanish',
+  'English',
+  'French',
+]
+
+const setOfLanguages = new Set(languages)
+console.log(setOfLanguages);
+for (const lang of setOfLanguages) {
+console.log(lang);
+}
+console.log(setOfLanguages.add("Maths"));
+
+const someLeft = ["E", "d", "w"];
+for (const each of someLeft) {
+	setOfLanguages.add(each);
+}
+console.log(setOfLanguages);
+console.log(setOfLanguages.delete("d"));
+console.log(setOfLanguages);
+
+console.log(setOfLanguages.size);
+console.log(setOfLanguages.has('E'));
+setOfLanguages.clear();
+console.log(setOfLanguages);
+
+
+
+const languagess = [
+  'English',
+  'Finnish',
+  'English',
+  'French',
+  'Spanish',
+  'English',
+  'French',
+]
+
+
+const langset = new Set(languagess);
+console.log(langset);
+console.log(langset.size);
+
+const counts = [];
+
+
+for (const lang of langset) {
+		const filteredlang = languagess.filter((each)=>each === lang);
+		console.log(filteredlang);
+		counts.push({language: lang, count : filteredlang.length});
+}
+
+console.log(counts);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</script>
+
+	</body>
+</html>
+const setLanguage = new Set(languages);
+console.log(setLanguage);
+
+
+for (const lang of setLanguage) {
+	const filteredlang = languages.filter((each) => )	
+}

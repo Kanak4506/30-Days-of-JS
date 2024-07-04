@@ -147,7 +147,7 @@
                 }
             } while (shuffledRandomArray.length < 5);
         });
-        console.log(shuffledRandomArray) ;
+        console.log(shuffledRandomArray);
 
         // q9
         function factorial(num) {
@@ -254,18 +254,38 @@
         console.log(checkDataType(mixed_type));
 
 
-        
+
         // q18
-              function isValidVariable(given) {
-              
-                if(given.match(/[$_\w]/g)){
-                  result  = ('it is valid');
-                } else {
-                    result = ('it is not valid');
-                }  return result;
-              } 
-              let given ='_fdhj$asdfk';
-              console.log(isValidVariable(given));
+        let alpNum = /[\w_$]/;
+        let num = '0123456789';
+        function isValidVariable(given) {
+            if(!given[0].match(num)) {
+                
+            
+            for(let i = 1; i < given.length; i++) {
+                if(given[i].match(alpNum))
+                {
+                    console.log("It is valid.")
+                }
+                else {
+                    console.log("It is invalid.");
+                    break;
+                }
+            }
+        }
+        }
+console.log(isValidVariable("akfj34"));
+
+
+
+        //     if(given.match(/[$_\w]/g)){
+        //       result  = ('it is valid');
+        //     } else {
+        //         result = ('it is not valid');
+        //     }  return result;
+        //   } 
+        //   let given ='_fdhj$asdfk';
+        //   console.log(isValidVariable(given));
         // // 
 
         // function isValidVariable(given) {}
@@ -274,28 +294,28 @@
         let newArr = [];
         function unique_num(n) {
             for (let i = 0; i < 7; i++) {
-                newArr =[];
-            do{
-                randomNum = Math.floor(Math.random() * 10)
-                if (!newArr.includes(randomNum)) {
-                    newArr.push(randomNum);
-                }
-            } while (newArr.length < 7 )
+                newArr = [];
+                do {
+                    randomNum = Math.floor(Math.random() * 10)
+                    if (!newArr.includes(randomNum)) {
+                        newArr.push(randomNum);
+                    }
+                } while (newArr.length < 7)
             }
             return newArr;
         }
         console.log(unique_num(newArr));
 
         // q20
-let reversed_arr = [];
+        let reversed_arr = [];
         function reverseCountries(array) {
-for( let i = array.length - 1; i >= 0; i--) {
-    reversed_arr.push(array[i]);
-} 
-console.log(array)
-return reversed_arr;
+            for (let i = array.length - 1; i >= 0; i--) {
+                reversed_arr.push(array[i]);
+            }
+            console.log(array)
+            return reversed_arr;
         }
-        let countries = ['India','Pakistan','America','USA'];
+        let countries = ['India', 'Pakistan', 'America', 'USA'];
         console.log(reverseCountries(countries));
 
     </script>

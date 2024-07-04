@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>Day 10 Level 3</title>
+</head>
+<body>
+    <script type ="module">
+        import {countries} from './countries.js'
+        // q1
+        let uniquesetCountries = new Set();
+        for(const country of countries) {
+            for (const lang of country.languages) {
+                uniquesetCountries.add(lang);
+            }
+        }
+        console.log(`There are ${uniquesetCountries.size} languages in the countries object file.`);
+
+        // q2
+
+        const counts = [];
+        const count = {};
+        for(const country of countries) {
+        for(const l of uniquesetCountries) {
+            const filteredLang = country.languages.filter((each) => each === l)
+            counts.push({ laang : l, count : filteredLang.length})
+        }
+    }
+    console.log(counts);
+//         const counts = [];
+//         for (const country of countries) {
+//   for (const lang of country.languages) {
+//     const filteredLang = country.languages.filter((each) => each ==lang);
+//     counts.push({language: lang , count : filteredLang.length})
+// }
+// }
+// console.log(counts);
+// const langSet = new Set();
+// for(const country of countries) {
+//     for(const lang of country.languages) {
+//      langSet.add(lang);
+// }
+// }
+// console.log(langSet);
+// const uniqueLangSet = new Set(langSet);
+// console.log(uniqueLangSet);
+// console.log(uniqueLangSet.size);
+
+
+        // for(const lng of uniquesetCountries) {
+        //     const filteredLang = (country.languages.filter((each) => each === lng));
+        //     counts.push({languagee: lng , count: filteredLang.length});
+        // }
+        // console.log(counts);
+        // counts.sort((a,b) => {
+        //     if( a.counts > b.counts) return -1;
+        //     if (a.counts < b.counts) return 1;
+        //     return 0;
+        // });
+        // console.log(counts);
+// onst langset = new Set(languagess);
+// console.log(langset);
+// console.log(langset.size);
+
+// const counts = [];
+
+
+// for (const lang of langset) {
+// 		const filteredlang = languagess.filter((each)=>each === lang);
+// 		console.log(filteredlang);
+// 		counts.push({language: lang, count : filteredlang.length});
+// }
+
+// console.log(counts);
+    </script>
+</body>
+</html>

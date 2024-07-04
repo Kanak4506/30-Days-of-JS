@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Day 10 Level 2</title>
+</head>
+
+<body>
+    <script>
+        const a = [4, 5, 8, 9];
+        const b = [3, 4, 5, 7];
+       
+        // q1
+        let A = new Set(a);
+        let B = new Set(b);
+        let c = [...a, ...b]
+        let C = new Set(c);
+        console.log(C);
+
+        // q2
+        let d = a.filter((num) => B.has(num));
+        console.log(d);
+
+        // q3 (a - b)
+        let e = a.filter((num) => !B.has(num));
+        console.log(e);
+    </script>
+</body>
+
+</html>

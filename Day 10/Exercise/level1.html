@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Day 10 Level 1</title>
+</head>
+
+<body>
+    <script>
+        // q1
+        let emptyset = new Set();
+        console.log(emptyset);
+
+        // q2
+        for (let i = 0; i < 11; i++) {
+            emptyset.add(i);
+        }
+        console.log(emptyset);
+
+        // q3
+        emptyset.delete(4);
+        console.log(emptyset);
+
+        // q4
+        emptyset.clear();
+        console.log(emptyset);
+
+        // q5
+        let strArr = ["Kanak", "Mehak", "Shanvi", "Tanisha", "Gireshi"];
+        for (const each of strArr) {
+            emptyset.add(each);
+        }
+        console.log(emptyset);
+
+        // q6
+        const countries = ['Finland', 'Sweden', 'Norway']
+        let mapOfCountries = new Map();
+        for (const country of countries) {
+            mapOfCountries.set(country, country.length);
+        }
+        console.log(mapOfCountries);
+    </script>
+</body>
+
+</html>
