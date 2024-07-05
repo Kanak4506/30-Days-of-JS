@@ -1,0 +1,103 @@
+<html>
+	<body>
+	
+		<p id="first"></p>
+		<p id="second">afga</p>
+		<p id="third">afjogji</p>
+		<p id="fourth"></p>
+		
+		<script>
+		
+		//q1
+		let text = document.querySelector('p');
+		text.innerHTML = "Yahoooooooooo!aaj to mja aa gya";
+		console.log(text);
+		
+		
+		//q2
+		let firstP = document.querySelector('#first');
+		let secondP = document.querySelector('#second');
+		let thirdP = document.querySelector('#third');
+		let fourthP = document.querySelector('#fourth');
+		
+		
+		//q3
+		let node = document.querySelectorAll('p');
+		console.log(node);
+		
+		
+		//q4
+		for(const each of node) {
+			console.log(each.innerHTML)
+		}
+		
+		
+		//q5
+		fourthP.innerHTML = 'Fourth Paragraph'
+		console.log(fourthP);
+		
+		
+		//q6
+		node[0].className = 'para';
+		node[1].id = '11';
+		node[2].id = '03';
+		node[3].id = '02';
+		node[0].id = '01';
+		node[2].className = 'para';
+		node[3].className = 'para';
+		node[1].className = 'para';
+		
+		console.log(node);
+		
+		
+		
+		//@#%$^#%$^$&%^^^^^^^^^^^^^^^^^Level 2^^^^^^^^^^^^^^^^^^^^
+		
+		
+		//q1
+		fourthP.style.fontSize ='24px';
+		thirdP.style.backgroundColor ='orange';
+		secondP.style.color ='aqua'
+		firstP.style.border ='24px solid red'
+		
+		
+		//q2
+		
+		const paras = document.querySelectorAll("p");
+		paras.forEach((each, i) => {
+			if(i % 2 == 0) {
+				each.style.color = 'red';
+			} else {
+				each.style.color = 'green';
+			}
+		})
+		
+		
+		//q4
+		
+		firstP.innerText = 'Mein hoon dost';
+		secondP.innerText = 'Mein hoon bhoot';
+		thirdP.innerText = 'Mein hoon bhoot to bilkil bhi nhi';
+		fourthP.innerText = 'Mein fir hoon kon';
+		
+		firstP.className = 'khanah';
+		secondP.className = 'khanah';
+		thirdP.className = 'khanah';
+		fourthP.className = 'khanah';
+		
+		console.log(node);
+		
+		firstP.id = 'nah';
+		secondP.id = 'hnah';
+		thirdP.id = 'kh';
+		fourthP.id = 'han';
+		
+		console.log(node);
+		
+		
+		
+		
+		
+		</script>
+	</body>
+</html>

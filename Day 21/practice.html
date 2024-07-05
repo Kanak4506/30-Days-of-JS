@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Document Object Model</title>
+    </head>
+    <body>
+<!-- <marquee direction="top"> -->
+     <h1 class='title' id='first-title'>First Title</h1>
+     <h1 class='title' id='second-title'>Second Title</h1>
+     <h1 class='title' id='third-title'>Third Title</h1>
+     <h1></h1>
+     <p id="23">mein hu jiyan</p>
+    <!-- </marquee> -->
+<script>
+    // let moh = document.querySelectorAll('.title');
+    // console.log(moh);
+
+    // for(let i = 0; i < moh.length; i++) {
+    //     console.log(moh[i])
+    // }
+
+//     const titles = document.querySelectorAll('h1')
+// titles[3].className = 'title'
+// titles[3].id = 'fourth-title'
+
+// console.log(titles)
+
+const titles = document.querySelectorAll('h1')
+titles[3].setAttribute('id', 'fourth-title')
+titles[3].setAttribute('class', 'title')
+// console.log(titles)
+
+var element = document.getElementById("23");
+element.innerHTML = " "
+
+
+
+//another way to setting an attribute: append the class, doesn't over ride
+// titles[3].classList.add('title', 'header-title')
+// console.log(titles)
+//another way to setting an attribute: append the class, doesn't over ride
+// titles[3].classList.remove('title', 'header-title')
+titles[3].textContent = 'Fourth Title';
+console.log(titles);
+
+</script>
+    </body>
+  </html>
