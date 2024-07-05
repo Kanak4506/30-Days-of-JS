@@ -1,13 +1,15 @@
 <html>
+
 <head>
     <title>Day 10 Level 3</title>
 </head>
+
 <body>
-    <script type ="module">
-        import {countries} from './countries.js'
+    <script type="module">
+        import { countries } from './countries.js'
         // q1
         let uniquesetCountries = new Set();
-        for(const country of countries) {
+        for (const country of countries) {
             for (const lang of country.languages) {
                 uniquesetCountries.add(lang);
             }
@@ -16,60 +18,38 @@
 
         // q2
 
-        const counts = [];
-        const count = {};
-        for(const country of countries) {
-        for(const l of uniquesetCountries) {
-            const filteredLang = country.languages.filter((each) => each === l)
-            counts.push({ laang : l, count : filteredLang.length})
-        }
-    }
-    console.log(counts);
-//         const counts = [];
-//         for (const country of countries) {
-//   for (const lang of country.languages) {
-//     const filteredLang = country.languages.filter((each) => each ==lang);
-//     counts.push({language: lang , count : filteredLang.length})
-// }
-// }
-// console.log(counts);
-// const langSet = new Set();
-// for(const country of countries) {
-//     for(const lang of country.languages) {
-//      langSet.add(lang);
-// }
-// }
-// console.log(langSet);
-// const uniqueLangSet = new Set(langSet);
-// console.log(uniqueLangSet);
-// console.log(uniqueLangSet.size);
+       
+       function mostSpokenLang(countries, top) {
+            const allLang = new Set();
 
+            countries.forEach((country) => 
+        {
+            country.languages.forEach(language => {
+                allLang.add(language);
+            });
+        });
 
-        // for(const lng of uniquesetCountries) {
-        //     const filteredLang = (country.languages.filter((each) => each === lng));
-        //     counts.push({languagee: lng , count: filteredLang.length});
-        // }
-        // console.log(counts);
-        // counts.sort((a,b) => {
-        //     if( a.counts > b.counts) return -1;
-        //     if (a.counts < b.counts) return 1;
-        //     return 0;
-        // });
-        // console.log(counts);
-// onst langset = new Set(languagess);
-// console.log(langset);
-// console.log(langset.size);
+        const langcount = new Map();
+            allLang.forEach(language => {
+                let count = 0;
+                countries.forEach(country => {
+                    if(country.languages.includes(language)){
+                        count++;
+                    }
+                });
+                langcount.set(language, count);
+            });
+console.log(langcount)
+            const sortedLang = [...langcount.entries()].sort((a,b) => b[1] - a[1]);
 
-// const counts = [];
-
-
-// for (const lang of langset) {
-// 		const filteredlang = languagess.filter((each)=>each === lang);
-// 		console.log(filteredlang);
-// 		counts.push({language: lang, count : filteredlang.length});
-// }
-
-// console.log(counts);
+            return sortedLang.slice(0, top ).map(([language, count]) =>({[language]: count }));
+       }
+       
+       console.log(mostSpokenLang(countries, 10))
+       
+       
+   
     </script>
 </body>
+
 </html>
