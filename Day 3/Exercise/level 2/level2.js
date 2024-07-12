@@ -24,10 +24,20 @@
 
 // ques5 Calculate the slope, x-intercept and y-intercept of y = 2x -2
 
-let slope1 = 2;
+// let slope1 = 2;
+// let y_intercept = -2;
+// let x_intercept = -y_intercept/slope1;
+// console.log(x_intercept);
+
+//alternate
+let x_is = parseInt(prompt('enter value of x'))
+let y_is = parseInt(prompt('enter value of y'))
+
+let x_intercept = 1;
 let y_intercept = -2;
-let x_intercept = -y_intercept/slope1;
-console.log(x_intercept);
+let slope = -y_intercept/x_intercept;
+console.log(slope);
+
 
 // ques6 Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and point(6,10)
 
