@@ -10,6 +10,7 @@ box.addEventListener("mousemove", function(info){
     if(insideRect < box_location.width / 2){
         // box.style.color :"red";
         console.log("hey");
+        
     } else{
         console.log("hello");
     }
