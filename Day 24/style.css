@@ -31,7 +31,7 @@ h1 {
     margin: 50px;
 }
 
-.nav_items{
+.nav_items {
     width: 200px;
     font-size: 16px;
     border-radius: 5px;
@@ -40,11 +40,12 @@ h1 {
     padding: 0px 15px;
 }
 
-.calculate{
+.calculate {
     background-color: #6b6b6b;
     color: white;
 }
-.hide{
+
+.hide {
     text-align: center;
     font-size: 25px;
     font-family: math;
@@ -53,7 +54,7 @@ h1 {
     display: none;
 }
 
-.planet_container{
+.planet_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,25 +63,27 @@ h1 {
     padding: 25px;
 }
 
-.starting{
+.starting {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.result_mass{
+.result_mass {
     height: 200px;
     width: 400px;
     padding: 12px;
     background-color: #3939387c;
 }
-.selected_planet_result{
+
+.selected_planet_result {
     font-family: cursive;
     height: 60px;
     font-size: 23px;
     color: white;
 }
-.selected_planet_mass{
+
+.selected_planet_mass {
     padding: 30px;
     margin: 13px;
     font-size: 20px;
@@ -88,4 +91,100 @@ h1 {
     border-radius: 50%;
     color: white;
     background-color: #494949;
+}
+
+@media screen and (max-width: 430px) {
+    .main_container {
+        width: 400px;
+        padding: 5px;
+
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav_items {
+        padding: 0px 15px;
+        margin: 15px 48px;
+    }
+
+    .hide {
+        font-size: 20px;
+    }
+
+    .starting img {
+        height: 400px;
+        width: 400px;
+    }
+
+    .result_planet_img img {
+        height: 400px;
+        width: 400px;
+        margin-bottom: 14px;
+
+    }
+
+    .planet_container {
+        flex-direction: column;
+        margin: 25px;
+        padding: 25px;
+
+    }
+
+    .selected_planet_result {
+        font-family: cursive;
+        height: 60px;
+        font-size: 23px;
+        color: white;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    .main_container {
+        margin: 20px;
+
+    }
+    h1 {
+        font-size: 14px;
+        margin-left: 22px;
+    }
+    .starting img {
+        height: 200px;
+        width: 200px;
+    }
+
+    
+    .result_planet_img img {
+        height: 200px;
+        width: 200px;
+
+    }
+
+    .planet_container {
+        flex-direction: column;
+        margin: 25px;
+        padding: 25px;
+
+    }
+
+    .selected_planet_result {
+        font-size: 18px;
+    }
+    .selected_planet_mass {
+        padding: 20px;
+        font-size: 15px;
+        margin-left: 195px;
+    }
+    
+    .result_mass {
+        height: 200px;
+        width: 300px;
+    }
+    
 }
