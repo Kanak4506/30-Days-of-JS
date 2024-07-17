@@ -17,10 +17,11 @@ window.addEventListener('keypress', (event) => {
     pressed_key.innerText = `You Pressed ${some}`;
     main_container.appendChild(pressed_key);
 
-    key_char_code.innerText = `${event.charCode}`
+    key_char_code.innerText = `${event.which}`
     main_container.append(key_char_code);
 
     press.style.display = 'none';
+    
 })
 
 

@@ -36,6 +36,7 @@ function calculateMass() {
 
         planet_container.style.display = 'none';
     }
+   
     const result_finally = (mass * gravity).toFixed(2);
     selected_planet_result.innerText = `The weight of object on ${planet_name}`;
     selected_planet_mass.innerText = `${result_finally}`;
@@ -45,6 +46,9 @@ function calculateMass() {
         planet_container.style.display = 'none';
     }
 
+    if(!isNaN(result_finally)) {
+        hide_msg.innerText = '';
+    }
     planet_image.src = imageUrl;
 
 }
