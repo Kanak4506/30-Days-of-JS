@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //q1
+        const paragraph = `I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.`
+
+        const pattern = /[A-Z|a-z]+/g
+
+        const para_items_arr = paragraph.match(pattern);
+        console.log(para_items_arr);
+
+        const para_uniqueSet = new Set(para_items_arr);
+        console.log(para_uniqueSet);
+        const para_info = [];
+        for (const each_item of para_uniqueSet) {
+            const filtered_items = para_items_arr.filter((each) => each === each_item);
+            para_info.push({word: each_item, count: filtered_items.length});
+
+        }
+
+        console.log(para_info);
+        para_info.sort((a, b) => b.count - a.count);
+
+        function tenMostFrequentWords(para_info, size){
+           const result =  para_info.slice(0,size);
+            return result;
+        }
+
+      
+
+
+    </script>
+</body>
+
+</html>

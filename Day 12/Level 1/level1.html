@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //q1
+        const given = 'He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses per month.'
+        const pattern = /\d+/g;
+        const matches = given.match(pattern);
+        let income = 0;
+        for (const each of matches) {
+            income += parseInt(each);
+        }
+        console.log(income);
+
+        //q2
+        const points = ['-1', '2', '-4', '-3', '-1', '0', '4', '8'];
+
+        points.sort((a, b) => a - b);
+        console.log(points);
+
+        const distance = parseInt(points[points.length - 1]) - parseInt(points[0]);
+
+        console.log(distance);
+
+        //q3
+        // is_valid_variable('first_name') # True
+        // is_valid_variable('first-name') # False
+        // is_valid_variable('1first_name') # False
+        // is_valid_variable('firstname') # True
+
+        function is_valid_variable(name) {
+            let valid_rule = /^[a-z|A-Z|$|_][0-9|A-Z|a-z]*?/
+            
+            if(name.match(valid_rule)) {
+                return ('true')
+            } else {
+                return ('false')
+            }
+
+        }
+        console.log(is_valid_variable('k32anak'))
+
+
+
+
+    </script>
+</body>
+
+</html>

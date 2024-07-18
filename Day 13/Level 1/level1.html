@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="module">
+        import { countries } from './countries.js'
+
+        //q1
+        console.table(countries)
+
+        //q2
+        for (let i = 0; i < countries.length; i++) {
+            console.table(countries[i])
+        }
+        //alternate
+        
+        for (const country of countries) {
+            console.table(country)
+        }
+
+        //q3
+        let countries_name = [];
+        for (const country of countries) {
+            countries_name.push(country.name)
+        }
+
+        console.group('Desh')
+        console.log(countries_name)
+        console.table(countries)
+        console.groupEnd('Desh')
+    </script>
+</body>
+
+</html>

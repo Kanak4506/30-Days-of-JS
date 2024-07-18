@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13 Level 3</title>
+</head>
+<body>
+    <script>
+        console.time('time taken by for loop')
+        let num = [];
+        for ( let i = 0; i < 34; i++) {
+            num.push(i);
+        }
+        console.log(num);
+        console.timeEnd('time taken by for loop')
+
+        console.time('Time taken by for of loop')
+        let arr = [];
+        for (const each of num ) {
+            arr.push(each);
+        }
+        console.log(arr);
+        console.timeEnd('Time taken by for of loop')
+
+        console.time('Time taken by forEach loop')
+        const each_Arr = [];
+        num.forEach(element => {
+            each_Arr.push(element)
+        });
+        console.log(each_Arr);
+        console.timeEnd('Time taken by forEach loop')
+
+        console.time('Time taken by while loop')
+        const while_arr = [];
+        let i = 0; 
+        while ( i < 34 ) {
+            i++;
+            while_arr.push(i);
+        } 
+        console.log(while_arr)
+        console.timeEnd('Time taken by while loop')
+
+
+    </script>
+</body>
+</html>
