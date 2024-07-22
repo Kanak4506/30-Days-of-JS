@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 17 Level 2 & 3</title>
+</head>
+<body>
+    <h2>Day 17 Level 2 & 3</h2>
+    <h3>Web Storages</h3>
+
+    <script>
+// **********Level 2******
+
+//q1
+        const student = {
+            firstName: 'Kanak',
+            lastName: 'Sehrawat',
+            age: 18, 
+            country: 'India',
+            city: 'Panipat'
+        }
+
+        let student_text = JSON.stringify(student)
+        localStorage.setItem('student', student_text)
+
+// console.log(student_text)
+
+// **********Level 3******
+
+//q1
+console.log(JSON.parse(localStorage.getItem('student')))
+    </script>
+</body>
+</html>

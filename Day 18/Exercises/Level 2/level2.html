@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 18 Level 2</title>
+</head>
+
+<body>
+    <script>
+        const countriesAPI = 'https://restcountries.com/v2/all'
+        const catsAPI = 'https://api.thecatapi.com/v1/breeds'
+
+        //q2
+        let cat_name_arr = [];
+        const catsName = async () => {
+            try {
+                const response = await fetch(catsAPI);
+                const data = await response.json();
+                console.log(data);
+                for(const each of data) {
+                    const cat_name = each.name;
+                    cat_name_arr.push(cat_name)
+                    // console.log(cat_name)
+                }
+                console.log(cat_name_arr)
+            }
+            catch ( error ) {
+                console.log(error);
+            }
+        }
+
+        catsName()
+    </script>
+</body>
+
+</html>

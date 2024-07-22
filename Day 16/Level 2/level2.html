@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 16 Level 2</title>
+</head>
+
+<body>
+    <script>
+        const student = {
+            firstName: 'Asabeneh',
+            lastName: 'Yetayehe',
+            age: 250,
+            isMarried: true,
+            skills: ['HTML', 'CSS', 'JS', 'React', 'Node', 'Python',]
+        }
+
+        const filtered_student = JSON.stringify(student, ['firstName', 'lastName' ,'skills'])
+        console.log(filtered_student);
+    </script>
+</body>
+
+</html>

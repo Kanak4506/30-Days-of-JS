@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Concepts</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1>Hello Duniya!</h1>
+    <h3 class="first">It is a red color.</h3>
+    <h3 class="second">It is a blue color.</h3>
+    <h3 class="third">It is a green color.</h3>
+
+    <button>Do not click</button>
+    <script>
+        const h1 = document.querySelector('h1')
+        const first = document.querySelector('.first')
+        const second = document.querySelector('.second')
+        const third = document.querySelector('.third')
+        const btn = document.querySelector('button')
+
+        //dikkat aayi sequence mein ni hua
+        // btn.addEventListener('click', () => {
+        // setTimeout(() => {
+        //     h1.style.color = 'orange';
+        // }, 2000)
+        //     setTimeout(() => {
+        //         first.style.color = 'blue'
+        //     }, 2000)
+        //     setTimeout(() => {
+        //         second.style.color = ' green'
+        //     },1000)
+        //     setTimeout(() => {
+        //         third.style.color = 'red'
+        //     },1500)
+        // })
+
+        //callback hell se krte hai sequence lane ke liye
+        // btn.addEventListener('click', () => {
+        // h1.innerHTML = 'CallBack Hell'
+        //     setTimeout(() => {
+        //         h1.style.color = 'orange';
+        //         setTimeout(() => {
+        //             first.style.color = 'blue';
+        //             setTimeout(() => {
+        //                 second.style.color = ' green';
+        //                 setTimeout(() => {
+        //                     third.style.color = 'red';
+        //                 }, 1500)
+        //             }, 1000)
+        //         }, 1000)
+        //     }, 2000)
+        // })
+
+
+
+        //promises
+
+        btn.addEventListener('click', () => {
+            h1.innerHTML = 'Promises'
+            addColor(1500, '.first', 'green')
+            .then( () => addColor(1000 , '.second', 'red'))
+            .then( () => addColor(1000, '.third', 'blue'))
+            .catch((error) => {
+                console.log(error)
+            })
+        })
+        function addColor(time, selector, color) {
+            const element = document.querySelector(selector);
+            return promise = new Promise((resolve, reject) => {
+                if (element) {
+                    setTimeout(() => {
+                        element.style.color = color;
+                        resolve();
+                    }, time)
+                } else {
+                    reject(` There is no such element: "${selector}"`)
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 18</title>
+</head>
+
+<body>
+    <script>
+        const countriesAPI = 'https://restcountries.com/v2/all'
+        const catsAPI = 'https://api.thecatapi.com/v1/breeds'
+
+        //q1
+
+        //print the name of country, capital, languages, population and area.
+        let arr = [];
+        const getCountries = async () => {
+            try {
+                const response = await fetch(countriesAPI);
+                const data = await response.json();
+                // console.log(data)
+                for (const each of data) {
+                    const country_name = await (each.name);
+                    const capital = await each.capital
+                    const language = await each.languages;
+                    const population = await each.population
+                    const area = await each.area
+                    arr.push({ country_name, capital, language, population, area })
+                    // console.log(country_name)
+                    // console.log(capital);
+                    // console.log(language);
+                    // console.log(population);
+                    // console.log(area);
+
+                }
+                console.log(arr)
+
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        (getCountries())
+
+    </script>
+</body>
+
+</html>

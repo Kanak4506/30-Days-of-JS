@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 16 Level 1</title>
+</head>
+
+<body>
+    <script>
+
+        //q1
+        const skills = ['HTML', 'CSS', 'JS', 'React', 'Node', 'Python']
+        const json_arr = JSON.stringify(skills)
+        console.log(json_arr);
+
+        //q2
+        let age = 250;
+        const age_string = JSON.stringify(age);
+        console.log(age_string)
+
+        //q3
+        let isMarried = true;
+        const married_string = JSON.stringify(isMarried);
+        console.log(married_string);
+
+        //q4
+        const student = {
+            firstName: 'Asabeneh',
+            lastName: 'Yetayehe',
+            age: 250,
+            isMarried: true,
+            skills: ['HTML', 'CSS', 'JS', 'React', 'Node', 'Python',]
+        }
+
+        const student_string = JSON.stringify(student);
+        console.log(student_string);
+        
+    </script>
+</body>
+
+</html>

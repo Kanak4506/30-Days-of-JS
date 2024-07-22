@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 18 Level 3</title>
+</head>
+
+<body>
+    <script>
+        const countriesAPI = 'https://restcountries.com/v2/all'
+        const catsAPI = 'https://api.thecatapi.com/v1/breeds'
+
+
+        //q1
+        let weight_cat_arr = [];
+        const catsWeight = async () => {
+            try {
+                const response = await fetch(catsAPI);
+                const data = await response.json();
+                for (const each of data) {
+                    const weight = each.weight.metric;
+                    const cat_name = (each.name);
+                    const pattern = /\d+/g;
+                    const weights = (weight.match(pattern));
+                    const avg_weight = parseInt(weights[0]) + parseInt(weights[1]);
+                    weight_cat_arr.push({ cat_name, avg_weight })
+                }
+                // console.log(weight_cat_arr)
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        catsWeight();
+
+        //q2
+        let population_arr = [];
+        const largestCountries = async () => {
+            try {
+                const response = await fetch(countriesAPI);
+                const data = await response.json();
+                console.log(data)
+                for (const each of data) {
+                    const population = each.population;
+                    const countries_name = each.name;
+                    population_arr.push({ countries_name , population });
+                }
+                population_arr.sort((a, b) => b.population - a.population)
+                console.log(population_arr.slice(0,10));
+            }
+                
+             catch (error) {
+                console.log(error);
+            }
+        }
+
+        largestCountries()
+
+        //q3
+
+        let languages_arr = [];
+        const officialLanguages = async () => {
+            try {
+                const response = await fetch(countriesAPI);
+                const data = await response.json();
+                for (const each of data) {
+                    const country_languages = each.languages;
+                    for (const eachLang of country_languages) {
+                        const lang_arr = (eachLang.name)
+                        languages_arr.push(lang_arr)
+                    }
+                }
+                const languages = new Set(languages_arr);
+                console.log(languages)
+
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        officialLanguages()
+
+    </script>
+</body>
+
+</html>

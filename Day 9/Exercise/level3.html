@@ -164,6 +164,18 @@ ages.forEach((num) => {
 
 console.log(age);
 
+  const age_info = [];
+        const ages_set = new Set(ages);
+        for ( const age of ages_set) {
+            const filtered_age = ages.filter((each) => each === age);
+            console.log(filtered_age);
+            age_info.push({age: age, count: filtered_age.length})
+        }
+        age_info.sort((a, b) => b.count - a.count);
+        console.log(age_info);
+        const mode = age_info[0].age;
+        console.log(mode)
+
     </script>
 </body>
 </html>

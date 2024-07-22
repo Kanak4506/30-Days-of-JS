@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15 Level 1</title>
+</head>
+
+<body>
+    <script>
+        //q1
+        class animal {
+            constructor(name, age, color, legs) {
+                this.name = name;
+                this.age = age;
+                this.color = color;
+                this.legs = legs;
+            }
+
+            get description() {
+                return (`Hi! I am ${this.name}.
+I am ${this.age} saal ka/ki.
+My color is ${this.color}.
+Meri ${this.legs} taang hai.`)
+            }
+
+            set setName(name) {
+                this.name = name;
+            }
+
+            set set_legs(legs) {
+                this.legs = legs;
+            }
+
+            get getName() {
+                return this.name;
+            }
+        }
+
+        const person1 = new animal("Janvar", 23, 'white', 4)
+        console.log(person1.description);
+
+        person1.setName = 'lomdi';
+        person1.set_legs = 2;
+        console.log(person1.getName)
+        console.log(person1.description);
+
+
+        //q2
+        class cat extends animal {
+
+            constructor(name, age, color, legs, sound) {
+                super(name, age, color, legs)
+                this.sound = sound;
+            }
+
+            get description() {
+                return super.description + `I just make sounds like ${this.sound} whole day.`
+            }
+
+            hobby() {
+                return 'I just love sleeping whole day and loves to wake in night just like owl.'
+            }
+        }
+
+        let meow = new cat('miya', '3 months', 'black-white', 4, 'meow meow')
+        console.log(meow.description);
+        console.log(meow.hobby());
+
+        class dog extends animal {
+
+            constructor(name, age, color, legs, breed) {
+                super(name, age, color, legs)
+                this.breed = breed;
+            }
+
+            get description() {
+                return super.description + `I am ${this.breed} .`
+            }
+
+            hobby() {
+                return 'I just love my life.'
+            }
+        }
+
+        let sheru = new dog('sheru', 4 , 'brown-black', 4, 'pit-bull')
+        console.log(sheru.description);
+        console.log(sheru.hobby());
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15 Level 3</title>
+</head>
+
+<body>
+    <script>
+        //q1
+
+        let ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
+        let data = ages.sort((a, b) => a - b)
+        console.log(data)
+
+
+        class statistics {
+            constructor(data) {
+                this.data = data.sort((a, b) => a - b)
+            }
+            count() {
+
+                return `Count: ${this.data.length}`
+            }
+            sum() {
+                var sum = 0;
+                for (const each of this.data) {
+                    sum += each;
+                }
+                return `Sum: ${sum}`;
+            }
+            min() {
+                var min_value = this.data[0]
+                return `Min: ${min_value}`
+            }
+            max() {
+                var max_value = this.data[this.data.length - 1]
+                return `Max: ${max_value}`
+            }
+            range() {
+                var min_value = this.data[0]
+                var max_value = this.data[ages.length - 1]
+                return `Range: ${max_value - min_value} `
+            }
+            mean() {
+                let mean_value = (this.data.reduce((sum, value) => sum + value, 0)) / this.data.length
+                let mean_int = Math.ceil(mean_value);
+                return `Mean: ${mean_int}`
+            }
+            median() {
+                let data_length = this.data.length;
+                let result;
+                if (data_length % 2 !== 0) {
+                    result = this.data[((data_length + 1) / 2) - 1]
+                } else {
+                    result = this.data[((data_length / 2) + ((data_length / 2) + 1)) - 1]
+                }
+                return `Median: ${result}`;
+            }
+            variance() {
+                let mean_value = (this.data.reduce((sum, value) => sum + value, 0)) / this.data.length;
+                let number_variance = this.data.reduce((total, num) => total + (num - mean_value) ** 2, 0);
+
+                const Variance = (number_variance / this.data.length)
+                return `Variance: ${Variance.toFixed(1)}`
+                return `Standard Deviation: ${Math.sqrt(Variance).toFixed(2)} `
+            }
+            std_variance() {
+                let mean_value = (this.data.reduce((sum, value) => sum + value, 0)) / this.data.length;
+                let number_variance = this.data.reduce((total, num) => total + (num - mean_value) ** 2, 0);
+
+                const Variance = (number_variance / this.data.length)
+                return `Standard Deviation: ${Math.sqrt(Variance).toFixed(1)} `
+
+            }
+            mode() {
+                // let set = new Set(ages)
+
+                const data_info = [];
+                const data_set = new Set(this.data);
+                for (const each_data_value of data_set) {
+                    const filtered_data = this.data.filter((each) => each === each_data_value);
+                    data_info.push({ data: each_data_value, count: filtered_data.length })
+                }
+
+
+                data_info.sort((a, b) => b.count - a.count);
+                const mode_val = data_info[0].data;
+                return `Mode: ${mode_val}`
+            }
+
+            describe() {
+                console.log(this.count())
+                console.log(this.sum())
+                console.log(this.min())
+                console.log(this.max())
+                console.log(this.range())
+                console.log(this.mean())
+                console.log(this.median())
+                console.log(this.mode())
+                console.log(this.variance())
+                console.log(this.std_variance())
+            }
+
+
+        }
+
+
+
+
+        let age_Data = new statistics(ages)
+        console.log(age_Data.describe())
+
+
+
+
+
+        //q2
+
+        class personAccount {
+            constructor(firstName, secondName) {
+                this.firstName = firstName;
+                this.secondName = secondName;
+                // this.accountBalance = 0;
+                this.incomes = [];
+                this.expenses = [];
+            }
+
+            set addIncome(income) {
+                if (income > 0) {
+                    this.incomes.push(income)
+                }
+            }
+            set addExpense(expense) {
+                if (expense > 0) {
+                    this.expenses.push(expense)
+                }
+            }
+            totalIncome() {
+                return this.incomes.reduce((sum, cur) => sum + cur, 0)
+            }
+
+            totalExpense() {
+                return this.expenses.reduce((sum, cur) => sum + cur, 0)
+            }
+            accountBalance() {
+                return this.totalIncome() - this.totalExpense();
+            }
+
+            accountInfo() {
+                return `
+                ********Billing Account Info*********
+                Name: ${this.firstName + ' ' + this.secondName}
+                Total Income: ${this.totalIncome()}
+                Total Expense: ${this.totalExpense()}
+                Account Balance: ${this.accountBalance()}
+                `
+            }
+        }
+
+        const billing = new personAccount('kanak', 'sehrawat');
+        billing.addIncome = 5000;
+        billing.addExpense = 1500;
+        console.log(billing.accountInfo())
+
+    </script>
+</body>
+
+</html>
