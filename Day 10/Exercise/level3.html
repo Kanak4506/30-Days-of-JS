@@ -18,37 +18,36 @@
 
         // q2
 
-       
-       function mostSpokenLang(countries, top) {
+
+        function mostSpokenLang(countries, top) {
             const allLang = new Set();
 
-            countries.forEach((country) => 
-        {
-            country.languages.forEach(language => {
-                allLang.add(language);
+            countries.forEach((country) => {
+                country.languages.forEach(language => {
+                    allLang.add(language);
+                });
             });
-        });
 
-        const langcount = new Map();
+            const langcount = new Map();
             allLang.forEach(language => {
                 let count = 0;
                 countries.forEach(country => {
-                    if(country.languages.includes(language)){
+                    if (country.languages.includes(language)) {
                         count++;
                     }
                 });
                 langcount.set(language, count);
             });
-console.log(langcount)
-            const sortedLang = [...langcount.entries()].sort((a,b) => b[1] - a[1]);
+            console.log(langcount)
+            const sortedLang = [...langcount.entries()].sort((a, b) => b[1] - a[1]);
 
-            return sortedLang.slice(0, top ).map(([language, count]) =>({[language]: count }));
-       }
-       
-       console.log(mostSpokenLang(countries, 10))
-       
-       
-   
+            return sortedLang.slice(0, top).map(([language, count]) => ({ [language]: count }));
+        }
+
+        console.log(mostSpokenLang(countries, 10))
+
+
+
     </script>
 </body>
 

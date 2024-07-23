@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_container {
+    /* padding: 30px; */
+    border: 2px solid rgb(184, 184, 184);
+    background-color: #eff0f2;
+
+}
+
+.white_container {
+    background-color: #ffffff;
+    height: 95px;
+    padding: 10px;
+}
+
+.heading {
+    text-align: center;
+    font-family: math;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: cursive;
+    color: #f2a93b;
+    font-size: 37px;
+
+}
+
+.info_container,
+.lang_container {
+    padding: 0px 180px;
+}
+
+.each_lang_info,
+.country_each_lang_info {
+    /* border: 2px solid grey; */
+    display: flex;
+    align-items: center;
+    margin: 15px 8px;
+    font-family: cursive;
+}
+
+.lang_name,
+.country_lang_name {
+    width: 186px;
+}
+
+.progress_bar,
+.country_progress_bar {
+    width: 100%;
+
+}
+
+.graph,
+.country_lang_graph {
+    height: 30px;
+    background-color: #f2a93b;
+    /* border: 2px solid red; */
+}
+
+.value,
+.country_lang_value {
+    width: 80px;
+    padding: 3px;
+    font-family: cursive;
+
+}
+
+.buttons {
+    text-align: center;
+    margin: 14px;
+}
+
+button {
+    background-color: #f2a93b;
+    width: 150px;
+    height: 25px;
+    border-radius: 4px;
+    border: none;
+    font-family: cursive;
+}
+
+.about {
+    text-align: center;
+    font-family: math;
+    margin-bottom: 30px;
+}

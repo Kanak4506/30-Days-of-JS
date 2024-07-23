@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .main_container{
+} */
+.bgc-img {
+    position: absolute;
+    background-image: url(assests/images/globe-2.jpg);
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.globe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    color: white;
+    height: 500px;
+}
+
+.heading {
+    margin: 10px;
+}
+
+h1 {
+    font-size: 44px;
+    letter-spacing: 2px;
+    font-family: math;
+}
+
+h4 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.buttons {
+    margin: 10px;
+}
+
+.btn {
+    padding: 8px;
+    margin: 6px;
+    font-family: cursive;
+    background-color: #895be6;
+    color: white;
+    border: none;
+    font-size: 15px;
+}
+
+.input_bar {
+    display: flex;
+    margin: 15px;
+}
+
+#input {
+    width: 285px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    margin: 4px;
+    padding: 0px 22px
+}
+
+#input::placeholder {
+    padding-left: 25%;
+    font-family: Georgia;
+    font-size: 16px;
+}
+
+.countries_container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px;
+    display: none;
+    background-color: #fefee3;
+    z-index: -1;
+}
+
+.each_country_card {
+    margin: 34px;
+}
+
+.country_card_name {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    z-index: 1;
+    position: relative;
+}
+
+.map_bg_image {
+    background-image: url(assests/images/map_image.jpg);
+    background-size: cover;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    filter: blur(1.5px);
+    z-index: 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
