@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 19 Level 3</title>
+</head>
+
+<body>
+    <script>
+
+        //q1
+
+
+        function personAccount() {
+            let firstName = "Kanak";
+            let lastName = "Sehrawat";
+            let incomes = [
+                {
+                    description: 'Salary',
+                    amount: 12000
+                },
+                {
+                    description: 'Freelance',
+                    amount: 5000
+                }
+            ]
+            let expenses = [
+                {
+                    description: 'Rent',
+                    amount: 3500
+                },
+                {
+                    description: 'Groceries',
+                    amount: 500
+                }
+            ]
+
+            function addIncome(description, amount) {
+                incomes.push({ description, amount })
+            }
+
+            function addExpense(description, amount) {
+                expenses.push({ description, amount })
+            }
+
+            function totalProfitLoss() {
+                let totalIncome = 0;
+                let totalExpense = 0;
+
+                for (const each of incomes) {
+                    totalIncome += (each.amount);
+                }
+                for (const each of expenses) {
+                    totalExpense += each.amount;
+                }
+
+                console.log(`
+ I am  ${firstName} ${lastName}.
+ My total salary is ₹${totalIncome} whereas my total expenses cost me about ₹${totalExpense}.
+ Therefore, my total salary is ₹${totalIncome - totalExpense}.`);
+
+            }
+            addExpense('Club', 3500)
+            addIncome('Stock market', 5000)
+            totalProfitLoss()
+        }
+        const myClosure = personAccount()
+
+    </script>
+</body>
+
+</html>

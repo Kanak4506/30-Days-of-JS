@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 27</title>
+    <style>
+        .skills {
+            border: 2px solid red;
+            height: 70px;
+        }
+    </style>
 </head>
+
 <body>
     <h1>Kanak Sehrawat</h1>
     <div class="skills"></div>
@@ -18,6 +26,32 @@
     </div>
 
     <div class="teachs"></div>
+    <script type="module">
+        import { asabenehChallenges2020 } from './countries.js'
+        const skills_content = asabenehChallenges2020.author.titles
+         const skills = document.querySelector('.skills')
 
+        console.log(skills_content)
+        // skills.innerHTML = ''
+        // setInterval(() => {
+        //     // for (const each of skills_content) {
+        //         for (let i = 0; i < skills_content.length; i++) {
+        //             skills.innerHTML = skills_content[i]
+        //             // }
+        //         }
+        //         }, 1500)
+        //     // skills.innerHTML = ''
+
+
+//         let currentIndex = 0;
+
+//         function changeSkills () {
+// // for ()
+//             skills.textContent = skills_content[currentIndex];
+//             // currentIndex = (currentIndex + 1) % skills.length;
+//         }
+//         setInterval(changeSkills , 200)
+    </script>
 </body>
+
 </html>
