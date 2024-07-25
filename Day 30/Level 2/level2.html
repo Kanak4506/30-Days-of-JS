@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 30</title>
+    <title>Day 30 Level 2</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Validating Web Forms</h1>
+    <div class="container">
+        <h1>Form Validation</h1>
+        <form action="/action_page.php" onsubmit="return formValidation()" method="post">
+
+            <div class="form_item" id="firstname">
+                First Name: <br><input type="text" id="f_first_name" required><br>
+                <b><span class="form_error fname"></span></b>
+            </div>
+
+
+            <div class="form_item" id="lastname">
+                Last Name: <br><input type="text" id="f_last_name" required><br>
+                <b><span class="form_error flast"></span></b>
+            </div>
+
+            <div class="form_item" id="email">
+                E-mail: <br><input type="email" id="f_email" required><br>
+                <b><span class="form_error fmail"></span></b>
+            </div>
+
+            <div class="form_item" id="phone">
+                Telephone: <br><input type="tel" id="f_phone" required><br>
+                <b><span class="form_error fphone"></span></b>
+            </div>
+
+            <div class="form_item" id="password">
+                Password: <br><input type="password" id="f_password" required><br>
+                <b><span class="form_error fpass"></span></b>
+            </div>
+
+            <input type="submit" value="Submit" class="submit_btn">
+
+        </form>
+    </div>
+    <script src="script.js">
+
+    </script>
 </body>
+
 </html>
