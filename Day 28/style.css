@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+*{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+    body {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 400;
+    }
+
+    .text_input,
+    .score {
+        height: 40px;
+        width: 200px;
+        margin: 0px 15px;
+        /* border: none; */
+        font-family: "Nanum Myeongjo", serif;
+        border: 2px solid #e5c9c5;
+        outline: none;
+        font-size: 17px;
+        padding-left: 14px;
+        font-weight: 600;
+
+    }
+    .score::placeholder, .text_input::placeholder{
+        font-weight: normal;
+    }
+
+    button {
+        background-color: #e5c9c5;
+        border: none;
+        height: 40px;
+        width: 130px;
+        font-family: "Nanum Myeongjo", serif;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin: 0px 15px;
+    }
+
+    .leaderboard {
+        /* border: 2px solid; */
+        width: 70%;
+        text-align: center;
+    }
+
+    .leaderboard_items {
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: space-between;
+        /* margin: 0px 34px; */
+        /* width: 100%; */
+        padding: 20px;
+        background-color: #e5c9c5;
+        font-size: 20px;
+        font-family: cursive;
+        margin: 10px 0px;
+        cursor: pointer;
+        user-select: none;
+
+
+    }
+
+    .icons {
+        display: flex;
+        justify-content: space-around;
+        width: 20%;
+    }
+
+    .time {
+        font-size: 12px;
+    }
+
+    .icons_left {
+        background-color: #fff;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 16px;
+        cursor: pointer;
+    }
+      
+    /* .icons_left: */
+
+    .message {
+        color: red;
+        margin: 10px;
+        font-weight: bold;
+        padding: 4px;
+        font-size: 17px;
+
+    }
