@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Candal&family=Coiny&family=Fredoka:wght@300..700&family=Fruktur:ital@0;1&family=Rakkas&family=Yatra+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading_container{
+    /* margin: 7px; */
+    padding: 10px;
+    background-color: #ecedf2;
+    text-align: center;
+}
+.heading_container h1{
+    color: #f2b456;
+    letter-spacing: 3px;
+    font-size: 45px;
+    margin: 5px;
+
+}
+.heading_container h3{
+    font-weight: 500;
+    font-size: 21px;
+    color: #9c9d9b;
+}
+.number_countries{
+    color: #f2b456;
+    font-size: 21px;
+    font-weight: 500;
+    margin: 6px;
+}
+.search_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 20px;
+    padding: 10px; */
+}
+.search input{
+    margin-top: 40px;
+    height: 45px;
+    width: 550px;
+    outline: none;
+    border: 2px solid #f4eeed;
+    padding: 14px;
+    font-family: cursive;
+    font-size: 17px;
+
+}
+.search input::placeholder{
+    font-weight: lighter;
+    color: rgb(160, 153, 153);
+    font-size: 14px;
+}
+.search_container button{
+    width: 150px;
+    height: 40px;
+    font-family: cursive;
+    margin: 40px 20px;
+    border-radius: 20px;
+    background-color: #f2b456;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+}
+.countries_content_container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    padding: 20px 10px;
+}
+.each_country_card{
+    width: 258px;
+    padding: 28px;
+    margin: 20px;
+    background-color: #fff;
+}
+.img_div img{
+    width: 200px;
+}
+
+.country_name{
+    color: #f2b456;
+    font-size: 20px;
+    margin: 15px 0px;
+    text-align: center;
+    /* padding: 3px 5px; */
+}
+.country_info{
+    font-family: "Yatra One";
+    font-weight: 100;
+}
+
+.white_container {
+    background-color: #ffffff;
+    height: 95px;
+    padding: 10px;
+}
+
+.info_container,
+.lang_container {
+    padding: 0px 180px;
+}
+
+.each_lang_info,
+.country_each_lang_info {
+    display: flex;
+    align-items: center;
+    margin: 15px 8px;
+    font-family: cursive;
+}
+
+.lang_name,
+.country_lang_name {
+    width: 186px;
+}
+
+.progress_bar,
+.country_progress_bar {
+    width: 100%;
+
+}
+
+.graph,
+.country_lang_graph {
+    height: 30px;
+    background-color: #f2a93b;
+}
+
+.value,
+.country_lang_value {
+    width: 80px;
+    padding: 3px;
+    font-family: cursive;
+
+}
+
+.buttons {
+    text-align: center;
+    margin: 14px;
+}
+
+button {
+    background-color: #f2a93b;
+    width: 150px;
+    height: 25px;
+    border-radius: 4px;
+    border: none;
+    font-family: cursive;
+}
+
+.about {
+    text-align: center;
+    font-family: math;
+    margin-bottom: 30px;
+    font-size: 13px;
+    font-family: cursive;
+    color: #c2c3c9;
+}

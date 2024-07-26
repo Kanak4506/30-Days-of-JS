@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 40px;
-    border: 2px solid salmon;
+    /* border: 2px solid salmon; */
 }
 
 h1 {
@@ -22,7 +22,7 @@ h1 {
 }
 
 form {
-    border: 2px solid greenyellow;
+    /* border: 2px solid greenyellow; */
 }
 
 .form_item {

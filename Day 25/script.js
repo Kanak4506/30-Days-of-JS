@@ -152,4 +152,4 @@ function mostSpokenLanguages() {
         country_lang_value.innerHTML = req_lang_data[i].count;
     }
 
-}
+}   

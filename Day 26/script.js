@@ -9,7 +9,7 @@ const sort = document.querySelector('.sort')
 const countries_container = document.querySelector('.countries_container')
 const search_icon = document.querySelector('.search_icon')
 
-search_icon.addEventListener('click' , () => {
+search_icon.addEventListener('click', () => {
     alert('Please click on those purple buttons.')
 })
 
@@ -33,7 +33,7 @@ start_with_btn.addEventListener('click', () => {
     let start_length_span = document.querySelector('.start_length_span')
 
     input_Alp_span.style.color = '#4aed20'
-     start_length_span.style.color = '#115fff';
+    start_length_span.style.color = '#115fff';
 
     countriesContentMaker(start_alp_arr);
 })
