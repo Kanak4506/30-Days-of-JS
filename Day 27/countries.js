@@ -55,7 +55,7 @@ export const asabenehChallenges2020 = {
             'BSc. Information and Communication Eng.',
             'MSc. Food Technology',
             'BSc.Food Technology'
-        ],
+        ],  
         socialLinks: [
             {
                 social: 'LinkedIn',

@@ -1,181 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script type="module">
-import {countryInfo} from './countryInfo.js';
+        import { countryInfo } from './countryInfo.js';
 
-// q1
-// i)
-/*countryInfo.sort((a,b) =>
-{
-    if(a.name < b.name) return -1;
-    if(a.name > b.name) return 1;
-    return 0;
+        // q1
+        // i)
+        /*countryInfo.sort((a,b) =>
+        {
+            if(a.name < b.name) return -1;
+            if(a.name > b.name) return 1;
+            return 0;
+        
+        })
+        console.log(countryInfo);*/
 
-})
-console.log(countryInfo);*/
+        // ii)
+        /*countryInfo.sort((a,b) =>
+        {
+            if(a.capital < b.capital) return -1;
+            if(a.capital > b.capital) return 1;
+            return 0;
+        
+        })
+        console.log(countryInfo); */
 
-// ii)
-/*countryInfo.sort((a,b) =>
-{
-    if(a.capital < b.capital) return -1;
-    if(a.capital > b.capital) return 1;
-    return 0;
+        // iii)
+        // countryInfo.sort((a,b) =>
+        // {
+        //     if(a.population < b.population) return -1;
+        //     if(a.population > b.population) return 1;
+        //     return 0;
 
-})
-console.log(countryInfo); */
+        // })
+        // console.log(countryInfo);
 
-// iii)
-// countryInfo.sort((a,b) =>
-// {
-//     if(a.population < b.population) return -1;
-//     if(a.population > b.population) return 1;
-//     return 0;
+        //q2
+        // const uniqueLangSet = new Set();
+        // countryInfo.forEach((country) => {
+        //     country.languages.forEach((language) =>{
+        //         uniqueLangSet.add(language);
+        //     });
 
-// })
-// console.log(countryInfo);
-
-//q2
-// const uniqueLangSet = new Set();
-// countryInfo.forEach((country) => {
-//     country.languages.forEach((language) =>{
-//         uniqueLangSet.add(language);
-//     });
-    
-// });
-// const uniqueLangArray = [...uniqueLangSet];
-// console.log(uniqueLangSet);
-// console.log(uniqueLangArray);
+        // });
+        // const uniqueLangArray = [...uniqueLangSet];
+        // console.log(uniqueLangSet);
+        // console.log(uniqueLangArray);
 
 
-let arrLang = [];
-let coun = 0;
-countryInfo.forEach((country) => {
-    country.languages.forEach((lang) => {
-        for (let i = 0; i < countryInfo.length; i++) {
-            if(!arrLang.includes(lang)) {
-                arrLang.push(lang);
-            } else {
-                coun ++;
-            }
+        let arrLang = [];
+        let coun = 0;
+        countryInfo.forEach((country) => {
+            country.languages.forEach((lang) => {
+                for (let i = 0; i < countryInfo.length; i++) {
+                    if (!arrLang.includes(lang)) {
+                        arrLang.push(lang);
+                    } else {
+                        coun++;
+                    }
+                }
+            })
+        })
+        console.log(arrLang);
+        console.log(coun);
+        // const some = countryInfo.forEach((country) => country.languages);
+        // console.log(some);
+        // country.languages
+        // country.languages.forEach((lang) => {
+        //     if(lang === country.languages) {
+        //         arr ++;
+        //     }
+        // }); 
+        // });
+        // let arr = '';
+        // countryInfo.forEach((country) => {
+        //     country.languages.forEach((language) => {
+        //         return language;
+        // })
+        // });
+        // console.log();
+
+        // q3
+        countryInfo.sort((a, b) => {
+            if (a.population > b.population) return -1;
+            if (a.population < b.population) return 1;
+            return 0;
+
+        })
+        console.log(countryInfo);
+
+        function populatedCountries(countryInfo, numofcount) {
+            const populatedCountries = countryInfo.filter((country, index) => index < numofcount);
+            return (populatedCountries);
         }
-    })
-})
-console.log(arrLang);
-console.log(coun);
-// const some = countryInfo.forEach((country) => country.languages);
-// console.log(some);
-    // country.languages
-// country.languages.forEach((lang) => {
-//     if(lang === country.languages) {
-//         arr ++;
-//     }
-// }); 
-// });
-// let arr = '';
-// countryInfo.forEach((country) => {
-//     country.languages.forEach((language) => {
-//         return language;
-    // })
-// });
-// console.log();
 
-// q3
-countryInfo.sort((a,b) =>
-{
-    if(a.population > b.population) return -1;
-    if(a.population < b.population) return 1;
-    return 0;
-
-})
-console.log(countryInfo);
-
-function populatedCountries(countryInfo,  numofcount) {
-const populatedCountries = countryInfo.filter((country, index) => index < numofcount);
-return (populatedCountries);
-}
-
-console.log(populatedCountries(countryInfo, 10))
+        console.log(populatedCountries(countryInfo, 10))
 
 
 
-// q4
+        // q4
 
-const ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
+        const ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
 
-let count = ages.length;
-console.log(count);
-let sum = 0;
-const SuM = ages.reduce((acc, cur) => sum = acc + cur);
-console.log(SuM);
-const minValue = ages.reduce((acc, cur) => cur > acc ? acc : cur);
-console.log(minValue);
-const maxValue = ages.reduce((acc, cur) => cur < acc ? acc : cur);
-console.log(maxValue);
-const range = maxValue - minValue;
-console.log(range);
+        let count = ages.length;
+        console.log(count);
+        let sum = 0;
+        const SuM = ages.reduce((acc, cur) => sum = acc + cur);
+        console.log(SuM);
+        const minValue = ages.reduce((acc, cur) => cur > acc ? acc : cur);
+        console.log(minValue);
+        const maxValue = ages.reduce((acc, cur) => cur < acc ? acc : cur);
+        console.log(maxValue);
+        const range = maxValue - minValue;
+        console.log(range);
 
-const mean = parseInt(SuM / count) ;
-console.log(mean);
+        const mean = parseInt(SuM / count);
+        console.log(mean);
 
-ages.sort((a,b) =>{
-    if (a > b) return 1;
-    if (a < b) return -1;
-    return 0;
-});
-console.log(ages);
+        ages.sort((a, b) => {
+            if (a > b) return 1;
+            if (a < b) return -1;
+            return 0;
+        });
+        console.log(ages);
 
-function median() {
-    if( count % 2 != 0) {
-        var result = (count + 1 ) / 2 ;
-    } else {
-        result = (count / 2) + (count / 2 + 1);
-    }
-    return ages[result - 1];
-}
-const medianAges = (median());
-console.log(medianAges);
+        function median() {
+            if (count % 2 != 0) {
+                var result = (count + 1) / 2;
+            } else {
+                result = (count / 2) + (count / 2 + 1);
+            }
+            return ages[result - 1];
+        }
+        const medianAges = (median());
+        console.log(medianAges);
 
-let numerVariance = 0;
-for (let i = 0; i < ages.length; i++) {
-    numerVariance += (ages[i] - mean) * (ages[i] - mean) ;
-}
-console.log(numerVariance);
-const variance = numerVariance / (ages.length) ; 
-console.log(variance);
-// const mode = ; 
+        let numerVariance = 0;
+        for (let i = 0; i < ages.length; i++) {
+            numerVariance += (ages[i] - mean) * (ages[i] - mean);
+        }
+        console.log(numerVariance);
+        const variance = numerVariance / (ages.length);
+        console.log(variance);
+        // const mode = ; 
 
-const standDev = Math.sqrt(variance).toFixed(1);
-console.log(standDev);
+        const standDev = Math.sqrt(variance).toFixed(1);
+        console.log(standDev);
 
-let age = {};
-ages.forEach((num) => {
-    if(age[num]) {
-        age[num] ++;
-    } else {
-        age[num] = 1;
-    }
-});
+        let age = {};
+        ages.forEach((num) => {
+            if (age[num]) {
+                age[num]++;
+            } else {
+                age[num] = 1;
+            }
+        });
 
-console.log(age);
+        console.log(age);
 
-  const age_info = [];
+        const age_info = [];
         const ages_set = new Set(ages);
-        for ( const age of ages_set) {
+        for (const age of ages_set) {
             const filtered_age = ages.filter((each) => each === age);
             console.log(filtered_age);
-            age_info.push({age: age, count: filtered_age.length})
+            age_info.push({ age: age, count: filtered_age.length })
         }
         age_info.sort((a, b) => b.count - a.count);
         console.log(age_info);
         const mode = age_info[0].age;
         console.log(mode)
 
+
+        //*************Day completed***********
+
     </script>
 </body>
+
 </html>

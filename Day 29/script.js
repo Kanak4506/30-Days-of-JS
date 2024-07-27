@@ -19,8 +19,7 @@ function randomFontFamily() {
 }
 
 
-// colorEachLetter()
-// randomFontFamily()
+
 
 function changes() {
     randomFontFamily()
@@ -44,3 +43,6 @@ changes()
 setInterval(() => {
     changes()
 }, 3500)
+
+
+//*************Day completed***********

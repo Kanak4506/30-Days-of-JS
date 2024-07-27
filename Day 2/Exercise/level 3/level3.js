@@ -26,3 +26,4 @@ let [monthlysalary, annualbonus, onlinecourses] = numbers.map(Number);
 let annualincome = (monthlysalary*12)+(annualbonus)+(onlinecourses*12);
 console.log(`His annual income is ${annualincome} euro.`) 
 
+        //*************Day 2 completed***********

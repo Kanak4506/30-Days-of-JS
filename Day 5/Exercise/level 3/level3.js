@@ -6,26 +6,26 @@ console.log(`max age is ${ages[9]}`);
 
 let n = ages.length;
 console.log(n)
-if(n%2 === 1){
-    median = ages[Math.floor(n/2)];
+if (n % 2 === 1) {
+    median = ages[Math.floor(n / 2)];
 
 } else {
-    median = (ages[n/2 - 1] + ages[n/2]) /2;
+    median = (ages[n / 2 - 1] + ages[n / 2]) / 2;
 
 }
 console.log(median);
 // for avg
 let sum = 0;
 for (let i = 0; i < n; i++) {
-     sum += ages[i]; 
+    sum += ages[i];
 }
 let avg = sum / ages.length;
 console.log(avg);
-console.log(`Range of ages = [${ages[9]-ages[0]}]`);
+console.log(`Range of ages = [${ages[9] - ages[0]}]`);
 
 let cond1 = Math.abs(ages[0] - avg);
 let cond2 = Math.abs(ages[9] - avg);
-console.log("cond1 === cond2 is",cond1 === cond2)
+console.log("cond1 === cond2 is", cond1 === cond2)
 
 const countries = [
     'Afghanistan',
@@ -221,15 +221,15 @@ const countries = [
     'Yemen',
     'Zambia',
     'Zimbabwe'
-  ]
+]
 
-  console.log(countries.slice(0,10));
+console.log(countries.slice(0, 10));
 
- n = countries.length;
- console.log(n);
-if (n%2 === 0){
-    console.log(countries[n/2 -1] , countries[n/2] );
-} else console.log(countries[parseInt((n/2) - 1 )]);
+n = countries.length;
+console.log(n);
+if (n % 2 === 0) {
+    console.log(countries[n / 2 - 1], countries[n / 2]);
+} else console.log(countries[parseInt((n / 2) - 1)]);
 
 
 
@@ -250,9 +250,12 @@ if (n%2 === 0){
 // console.log(second_half.length);
 
 
-let middleIndex = Math.ceil(n/2);
-let first_half = countries.slice(0,middleIndex);
+let middleIndex = Math.ceil(n / 2);
+let first_half = countries.slice(0, middleIndex);
 let second_half = countries.slice(middleIndex);
 console.log(first_half + (second_half));
 console.log(first_half.length);
 console.log(second_half.length);
+
+
+//*************Day completed***********

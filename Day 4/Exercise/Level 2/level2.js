@@ -100,3 +100,6 @@ if ( day == 'saturday' || day ==  'sunday'){
 
 // // Example usage:
 // console.log(`${month} ${year} has ${daysInMonth(month, year)} days.`);
+
+
+        //*************Day completed***********

@@ -54,3 +54,9 @@ function calculateMass() {
 }
 
 calculate_button.addEventListener('click', calculateMass);
+
+
+
+
+
+//*************Day completed***********

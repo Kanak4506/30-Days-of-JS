@@ -48,3 +48,6 @@ function formValidation() {
 
     return isValid;
 }
+
+
+//*************Day completed***********

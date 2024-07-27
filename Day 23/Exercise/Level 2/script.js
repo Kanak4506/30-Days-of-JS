@@ -46,3 +46,10 @@ window.addEventListener('keypress', (event) => {
 //     main_container.appendChild(pressed_key);
 //     press.style.display = 'none';
 // })
+
+
+
+
+
+
+//*************Day completed***********

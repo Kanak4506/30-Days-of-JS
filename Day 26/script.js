@@ -99,3 +99,8 @@ function countriesContentMaker(provided) {
     }
 }
 countriesContentMaker(countries)
+
+
+
+
+//*************Day completed***********

@@ -138,3 +138,7 @@ add_player_btn.addEventListener('click', () => {
     }
 
 })
+
+
+
+//*************Day completed***********

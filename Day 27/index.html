@@ -5,53 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 27</title>
-    <style>
-        .skills {
-            border: 2px solid red;
-            height: 70px;
-        }
-    </style>
+   
+   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Kanak Sehrawat</h1>
-    <div class="skills"></div>
-    <div class="about_me"></div>
+    <div class="main_container">
+        <h1>Kanak Sehrawat</h1>
+        <div class="skills">
+            <div class="skills_icons"></div>
+            <div class="skills_name">My Skills</div>
 
-    <div class="js">
-        <div class="card">JAVASCIPT FOR EVERYONE</div>
-        <div class="card">30 DAYS OF PYTHON</div>
-        <div class="card">30 DAYS OF JAVASCIPT</div>
+        </div>
+        <div class="info">
+            I am Kanak Sehrawat. I am front end developer. I love studying new things . I have read the <b>30 Days Of
+                Javascript</b> completely. On 27 July, 2024 , I completed my the concept of <b>Javascript</b> challenge.
+        </div>
+        <div class="js">
+            <div class="card">JAVASCIPT FOR EVERYONE</div>
+            <div class="card">30 DAYS OF PYTHON</div>
+            <div class="card">30 DAYS OF JAVASCIPT</div>
 
+        </div>
+
+        <div class="teaches">The technologies I will study <span class="technologies">REACT</span></div>
     </div>
-
-    <div class="teachs"></div>
-    <script type="module">
-        import { asabenehChallenges2020 } from './countries.js'
-        const skills_content = asabenehChallenges2020.author.titles
-         const skills = document.querySelector('.skills')
-
-        console.log(skills_content)
-        // skills.innerHTML = ''
-        // setInterval(() => {
-        //     // for (const each of skills_content) {
-        //         for (let i = 0; i < skills_content.length; i++) {
-        //             skills.innerHTML = skills_content[i]
-        //             // }
-        //         }
-        //         }, 1500)
-        //     // skills.innerHTML = ''
-
-
-//         let currentIndex = 0;
-
-//         function changeSkills () {
-// // for ()
-//             skills.textContent = skills_content[currentIndex];
-//             // currentIndex = (currentIndex + 1) % skills.length;
-//         }
-//         setInterval(changeSkills , 200)
-    </script>
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>

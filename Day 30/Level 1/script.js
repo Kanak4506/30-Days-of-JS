@@ -50,7 +50,7 @@ capital_btn.addEventListener('click', () => {
 
 population_btn.addEventListener('click', () => {
     lang_container.innerHTML = '';
-    spokenLanguages()
+    populatedCountries()
 
 })
 

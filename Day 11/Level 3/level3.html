@@ -2,47 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <script type="module">
-       //q1
-       import { countries } from './countries.js'
-        for(const {name, capital, population, languages} of countries) {
-            // console.log(`Capital of ${name} is ${capital}. Population in ${name} is ${population}. Most common languages spoken there are as follows - ${languages}`)
-        }
-    
-        //q2
-        const student = ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]]
+  <script type="module">
+    //q1
+    import { countries } from './countries.js'
+    for (const { name, capital, population, languages } of countries) {
+      // console.log(`Capital of ${name} is ${capital}. Population in ${name} is ${population}. Most common languages spoken there are as follows - ${languages}`)
+    }
 
-        let [name, skills, [,, jsScore, reactScore] ] = student;
-        // console.log(name, skills, jsScore, reactScore)
+    //q2
+    const student = ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]]
 
-        //q3
-        const students = [
-        ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]],
-        ['John', ['HTM', 'CSS', 'JS', 'React'], [85, 80, 85, 80]]
-      ]
+    let [name, skills, [, , jsScore, reactScore]] = student;
+    // console.log(name, skills, jsScore, reactScore)
 
-
-        const convertArrayToObject = (given) => {
-            let arr = [];
-            for ( const [ name, skills, scores] of given ) {
-            
-                arr.push({name , skills, scores})
-            }
-        return (arr);
-
-        }
-
-        console.log(convertArrayToObject(students));
+    //q3
+    const students = [
+      ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]],
+      ['John', ['HTM', 'CSS', 'JS', 'React'], [85, 80, 85, 80]]
+    ]
 
 
-        //q4
-        const good_student = {
+    const convertArrayToObject = (given) => {
+      let arr = [];
+      for (const [name, skills, scores] of given) {
+
+        arr.push({ name, skills, scores })
+      }
+      return (arr);
+
+    }
+
+    console.log(convertArrayToObject(students));
+
+
+    //q4
+    const good_student = {
       name: 'David',
       age: 25,
       skills: {
@@ -53,31 +53,32 @@
           { skill: 'React', level: 9 }
         ],
         backEnd: [
-          { skill: 'Node',level: 7 },
+          { skill: 'Node', level: 7 },
           { skill: 'GraphQL', level: 8 },
         ],
-        dataBase:[
+        dataBase: [
           { skill: 'MongoDB', level: 7.5 },
         ],
-        dataScience:['Python', 'R', 'D3.js']
+        dataScience: ['Python', 'R', 'D3.js']
       }
     }
 
-const copiedStudent = {
-    ...good_student,
-    skills: {
+    const copiedStudent = {
+      ...good_student,
+      skills: {
         ...good_student.skills,
-        frontEnd: [ ...good_student.skills.frontEnd, {skill: 'Bootstrap', level: 8}],
-        backEnd: [ ...good_student.skills.backEnd, { skill: 'Express', level: 9}],
-        dataBase: [...good_student.skills.dataBase, { skill: 'SQL', level: 8}],
+        frontEnd: [...good_student.skills.frontEnd, { skill: 'Bootstrap', level: 8 }],
+        backEnd: [...good_student.skills.backEnd, { skill: 'Express', level: 9 }],
+        dataBase: [...good_student.skills.dataBase, { skill: 'SQL', level: 8 }],
         dataScience: [...good_student.skills.dataScience, 'SQL']
 
+      }
     }
-}
-console.log(copiedStudent)
+    console.log(copiedStudent)
 
+    //*************Day completed***********
 
-    </script>
+  </script>
 </body>
 
 </html>
