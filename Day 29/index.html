@@ -5,56 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 29</title>
-    <STYLE>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Fruktur:ital@0;1&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Fredoka:wght@300..700&family=Fruktur:ital@0;1&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Fredoka:wght@300..700&family=Fruktur:ital@0;1&family=Rakkas&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Fredoka:wght@300..700&family=Fruktur:ital@0;1&family=Rakkas&family=Yatra+One&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 45px;
-        }
-
-        h1 {
-            letter-spacing: 6px;
-            padding: 30px;
-            font-size: 100px;
-            font-family: cursive;
-        }
-
-        .container {
-            height: 680px;
-            width: 100%;
-            /* border: 2px solid red; */
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        .fade-in {
-            animation: fadeIn 2s ease-in-out;
-        }
-    </STYLE>
+   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -62,54 +13,8 @@
         <h1 id="text">30 DAYS OF JAVASCRIPT CHALLENGE BY KANAK SEHRAWAT IN 2024</h1>
     </div>
 
-    <script>
-        const text = document.querySelector('h1')
-        const container = document.querySelector('.container')
-
-        function coloring() {
-            let colorArr = [];
-            let given = 'abcdef0123456789';
-            for (let i = 0; i < 6; i++) {
-                colorArr.push(given[Math.floor(Math.random() * 15)]);
-            }
-            return '#' + colorArr.join('');
-
-        }
-
-        const font_family = ["Noto Serif", 'cursive', 'math', "Bebas Neue", "Shrikhand", "Fredoka", 'Fruktur', "Coiny", "Rakkas", 'Yatra One']
-
-        function randomFontFamily() {
-            let randomIndex = Math.floor(Math.random() * font_family.length)
-            text.style.fontFamily = font_family[randomIndex];
-        }
-
-
-        // colorEachLetter()
-        // randomFontFamily()
-
-        function changes() {
-            randomFontFamily()
-            colorEachLetter()
-            container.style.backgroundColor = coloring();
-        }
-
-        function colorEachLetter() {
-            let textContent = text.textContent;
-            text.innerHTML = '';
-
-            for (let char of textContent) {
-                const span = document.createElement('span');
-                span.textContent = char;
-                span.style.color = coloring();
-                text.appendChild(span)
-                span.classList.add('fade-in')
-            }
-        }
-        changes()
-        setInterval(() => {
-            changes()
-        }, 3500)
-
+    <script src="script.js">
+      
     </script>
 </body>
 

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Fruktur:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Fredoka:wght@300..700&family=Fruktur:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Fredoka:wght@300..700&family=Fruktur:ital@0;1&family=Rakkas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Fredoka:wght@300..700&family=Fruktur:ital@0;1&family=Rakkas&family=Yatra+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px;
+}
+
+h1 {
+    letter-spacing: 6px;
+    padding: 30px;
+    font-size: 100px;
+    font-family: cursive;
+}
+
+.container {
+    height: 680px;
+    width: 100%;
+    /* border: 2px solid red; */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
